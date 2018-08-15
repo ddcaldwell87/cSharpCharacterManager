@@ -10,9 +10,9 @@ namespace CharacterManager.Data
     class Inventory
     {
         [Key]
-        public int InventoryID { get; set; }
+        public int InventoryId { get; set; }
 
-        public int CharacterID { get; set; }
+        public int CharacterId { get; set; }
 
         [Required]
         public string ItemName { get; set; }

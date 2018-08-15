@@ -25,7 +25,10 @@ namespace CharacterManager.Data
     public class Character
     {
         [Key]
-        public int CharacterID { get; set; }
+        public int CharacterId { get; set; }
+
+        [Required]
+        public Guid OwnerId { get; set; }
 
         [Required]
         public string CharacterName { get; set; }

@@ -10,9 +10,9 @@ namespace CharacterManager.Data
     class Journal
     {
         [Key]
-        public int JournalID { get; set; }
+        public int JournalId { get; set; }
 
-        public int CharacterID { get; set; }
+        public int CharacterId { get; set; }
 
         [Required]
         public string Title { get; set; }
