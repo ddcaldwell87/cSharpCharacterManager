@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CharacterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -265,6 +266,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Character\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -286,6 +288,14 @@
     <ProjectReference Include="..\CharacterManager.Data\CharacterManager.Data.csproj">
       <Project>{7144C686-119D-4761-B50B-BA46E6BCBB5D}</Project>
       <Name>CharacterManager.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CharacterManager.Models\CharacterManager.Models.csproj">
+      <Project>{DB64A78C-91E4-4E8E-8EBF-27E8D1BC64BE}</Project>
+      <Name>CharacterManager.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CharacterManager.Services\CharacterManager.Services.csproj">
+      <Project>{84A97D71-31E6-463E-B45F-FD172AC79EE9}</Project>
+      <Name>CharacterManager.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

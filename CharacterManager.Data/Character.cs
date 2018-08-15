@@ -14,7 +14,7 @@ namespace CharacterManager.Data
 
     public enum Gender
     {
-        Male = 1, Female
+        Male = 1, Female, Other
     }
 
     public enum Class
@@ -34,12 +34,12 @@ namespace CharacterManager.Data
         public string CharacterName { get; set; }
 
         [Required]
-        public Race Race { get; set; }
+        public Race CharacterRace { get; set; }
 
         [Required]
-        public Gender Gender { get; set; }
+        public Gender CharacterGender { get; set; }
 
         [Required]
-        public Class Class { get; set; }
+        public Class CharacterClass { get; set; }
     }
 }

@@ -53,12 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CharacterService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterManager.Data\CharacterManager.Data.csproj">
+      <Project>{7144C686-119D-4761-B50B-BA46E6BCBB5D}</Project>
+      <Name>CharacterManager.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CharacterManager.Models\CharacterManager.Models.csproj">
+      <Project>{DB64A78C-91E4-4E8E-8EBF-27E8D1BC64BE}</Project>
+      <Name>CharacterManager.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
