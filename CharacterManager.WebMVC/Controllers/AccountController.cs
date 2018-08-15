@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using CharacterManager.WebMVC.Models;
+using CharacterManager.Data;
 
 namespace CharacterManager.WebMVC.Controllers
 {
