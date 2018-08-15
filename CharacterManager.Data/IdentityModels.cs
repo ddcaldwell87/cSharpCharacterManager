@@ -33,6 +33,8 @@ namespace CharacterManager.Data
         }
 
         public DbSet<Character> Characters { get; set; }
+        public DbSet<Journal> Journals { get; set; }
+        public DbSet<Inventory> Inventories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

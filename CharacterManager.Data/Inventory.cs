@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CharacterManager.Data
 {
-    class Inventory
+    public class Inventory
     {
         [Key]
         public int InventoryId { get; set; }

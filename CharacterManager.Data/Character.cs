@@ -9,12 +9,14 @@ namespace CharacterManager.Data
 {
     public enum Race
     {
-        Human = 1, Elf, Dwarf, Halfling, Orc, Gnome
+        Aarakocra = 1, Aasimar, Bugbear, Centaur, Changeling, Dragonborn, Dwarf, Elf, Feral_Tiefling, Firbolg, Genasi, Gith, Gnome, Goblin, Goliath, HalfElf, Halfling, HalfOrc, Hobgoblin, Human, Kalashtar, Kenku, Kobold, Lizardfolk, Minotaur, Orc, Shifter, Tabaxi, Tiefling, Tortle, Triton, Warforged, YuanTi_Pureblood
     }
 
     public enum Gender
     {
-        Male = 1, Female, Other
+        Male = 1,
+        Female,
+        Other
     }
 
     public enum Class

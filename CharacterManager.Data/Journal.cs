@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CharacterManager.Data
 {
-    class Journal
+    public class Journal
     {
         [Key]
         public int JournalId { get; set; }
