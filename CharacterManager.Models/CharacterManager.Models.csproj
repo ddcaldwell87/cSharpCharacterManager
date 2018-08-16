@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BigViewModel.cs" />
     <Compile Include="CharacterCreate.cs" />
     <Compile Include="CharacterDetail.cs" />
     <Compile Include="CharacterEdit.cs" />

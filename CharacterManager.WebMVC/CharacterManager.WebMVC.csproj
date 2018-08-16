@@ -273,8 +273,8 @@
     <Content Include="Views\Character\Details.cshtml" />
     <Content Include="Views\Character\Edit.cshtml" />
     <Content Include="Views\Character\Delete.cshtml" />
-    <Content Include="Views\Journal\Index.cshtml" />
     <Content Include="Views\Journal\Create.cshtml" />
+    <Content Include="Views\Journal\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

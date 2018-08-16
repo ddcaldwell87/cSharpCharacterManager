@@ -19,11 +19,14 @@ namespace CharacterManager.WebMVC.Controllers
             return View(service.GetJournals());
         }
 
-        public ActionResult Create()
+        public ActionResult Create(int characterId)
         {
-            var model = new JournalCreate();
-            var service = CreateJournalService(model);
-            return View(service);
+            var model = new JournalCreate
+            {
+                CharacterId = characterId,
+                OwnerId = Guid.Parse(User.Identity.GetUserId())
+            };
+            return View(model);
         }
 
         [HttpPost]
