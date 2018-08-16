@@ -23,6 +23,6 @@ namespace CharacterManager.Data
         [Required]
         public string ItemType { get; set; }
 
-        public virtual Character Character { get; set; }
+        public Character Character { get; set; }
     }
 }

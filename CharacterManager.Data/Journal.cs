@@ -12,7 +12,11 @@ namespace CharacterManager.Data
         [Key]
         public int JournalId { get; set; }
 
+        [Required]
         public int CharacterId { get; set; }
+
+        [Required]
+        public Guid OwnerId { get; set; }
 
         [Required]
         public string Title { get; set; }
@@ -25,6 +29,6 @@ namespace CharacterManager.Data
 
         public DateTimeOffset? ModifiedUtc { get; set; }
 
-        public virtual Character Character { get; set; }
+        public Character Character { get; set; }
     }
 }

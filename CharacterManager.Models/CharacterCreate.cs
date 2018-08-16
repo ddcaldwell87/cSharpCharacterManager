@@ -21,5 +21,9 @@ namespace CharacterManager.Models
 
         [Required]
         public Class CharacterClass { get; set; }
+
+        public Journal Journal { get; set; }
+
+        public Inventory Inventory { get; set; }
     }
 }

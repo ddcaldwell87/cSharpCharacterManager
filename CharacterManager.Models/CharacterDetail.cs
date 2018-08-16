@@ -23,5 +23,9 @@ namespace CharacterManager.Models
 
         [Display(Name = "Class")]
         public Class CharacterClass { get; set; }
+
+        public virtual ICollection<Journal> Journals { get; set; }
+
+        public virtual ICollection<Inventory> Inventories { get; set; }
     }
 }
