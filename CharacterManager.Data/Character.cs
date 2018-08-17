@@ -10,7 +10,7 @@ namespace CharacterManager.Data
 {
     public enum Race
     {
-        Aarakocra = 1, Aasimar, Bugbear, Centaur, Changeling, Dragonborn, Dwarf, Elf, Feral_Tiefling, Firbolg, Genasi, Gith, Gnome, Goblin, Goliath, HalfElf, Halfling, HalfOrc, Hobgoblin, Human, Kalashtar, Kenku, Kobold, Lizardfolk, Minotaur, Orc, Shifter, Tabaxi, Tiefling, Tortle, Triton, Warforged, YuanTi_Pureblood
+        Aarakocra = 1, Aasimar, Bugbear, Centaur, Changeling, Dragonborn, Dwarf, Elf, [Display(Name = "Feral Tiefling")]Feral_Tiefling, Firbolg, Genasi, Gith, Gnome, Goblin, Goliath, HalfElf, Halfling, HalfOrc, Hobgoblin, Human, Kalashtar, Kenku, Kobold, Lizardfolk, Minotaur, Orc, Shifter, Tabaxi, Tiefling, Tortle, Triton, Warforged, YuanTi_Pureblood
     }
 
     public enum Gender

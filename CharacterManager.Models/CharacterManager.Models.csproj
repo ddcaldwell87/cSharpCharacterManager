@@ -59,6 +59,8 @@
     <Compile Include="CharacterEdit.cs" />
     <Compile Include="CharacterListItem.cs" />
     <Compile Include="JournalCreate.cs" />
+    <Compile Include="JournalDetail.cs" />
+    <Compile Include="JournalEdit.cs" />
     <Compile Include="JournalListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -4,19 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.CharacterName's Journal Entries</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", new { id = Request.Url.Segments.Last() })
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.JournalId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CharacterId)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
@@ -31,12 +25,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.JournalId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CharacterId)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>

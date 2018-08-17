@@ -62,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CharacterManager.Contracts\CharacterManager.Contracts.csproj">
+      <Project>{D6BB355B-89B5-4A93-88F9-0B1B268E2F5D}</Project>
+      <Name>CharacterManager.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CharacterManager.Data\CharacterManager.Data.csproj">
       <Project>{7144C686-119D-4761-B50B-BA46E6BCBB5D}</Project>
       <Name>CharacterManager.Data</Name>

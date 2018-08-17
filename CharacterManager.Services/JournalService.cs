@@ -1,4 +1,5 @@
-﻿using CharacterManager.Data;
+﻿using CharacterManager.Contracts;
+using CharacterManager.Data;
 using CharacterManager.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CharacterManager.Services
 {
-    public class JournalService
+    public class JournalService : IJournalService
     {
         private readonly Guid _ownerId;
         private readonly int _characterId;
@@ -54,6 +55,21 @@ namespace CharacterManager.Services
                     });
                 return query.ToArray();
             }
+        }
+
+        public bool DeleteJournalEntry(int journalId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public JournalDetail GetJournalById(int journalId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateJournalEntry(JournalEdit model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

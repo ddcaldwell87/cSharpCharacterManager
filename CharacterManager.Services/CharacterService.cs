@@ -1,4 +1,5 @@
-﻿using CharacterManager.Data;
+﻿using CharacterManager.Contracts;
+using CharacterManager.Data;
 using CharacterManager.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CharacterManager.Services
 {
-    public class CharacterService
+    public class CharacterService : ICharacterService
     {
         private readonly Guid _ownerId;
 

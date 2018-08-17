@@ -54,11 +54,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ICharacterService.cs" />
+    <Compile Include="IJournalService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterManager.Models\CharacterManager.Models.csproj">
+      <Project>{DB64A78C-91E4-4E8E-8EBF-27E8D1BC64BE}</Project>
+      <Name>CharacterManager.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

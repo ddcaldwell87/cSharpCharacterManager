@@ -12,18 +12,22 @@ namespace CharacterManager.WebMVC.Controllers
     public class JournalController : Controller
     {
         // GET: Journal
-        public ActionResult Index(int characterId)
+        public ActionResult Index(int id)
         {
             var ownerId = Guid.Parse(User.Identity.GetUserId());
-            var service = new JournalService(ownerId, characterId);
+            var svc = new CharacterService(ownerId);
+            var service = new JournalService(ownerId, id);
+
+            ViewBag.CharacterName = svc.GetCharacterById(id).CharacterName;
+
             return View(service.GetJournals());
         }
 
-        public ActionResult Create(int characterId)
+        public ActionResult Create(int id)
         {
             var model = new JournalCreate
             {
-                CharacterId = characterId,
+                CharacterId = id,
                 OwnerId = Guid.Parse(User.Identity.GetUserId())
             };
             return View(model);
@@ -40,7 +44,7 @@ namespace CharacterManager.WebMVC.Controllers
             if (service.CreateJournalEntry(journal))
             {
                 TempData["SaveResult"] = "Your journal entry was created.";
-                return RedirectToAction("Details", "Character", new { id = journal.CharacterId });
+                return RedirectToAction("Index", "Journal", new { id = journal.CharacterId });
             }
 
             ModelState.AddModelError("", "Journal entry could not be created.");
