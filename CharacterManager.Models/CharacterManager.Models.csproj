@@ -53,15 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BigViewModel.cs" />
-    <Compile Include="CharacterCreate.cs" />
-    <Compile Include="CharacterDetail.cs" />
-    <Compile Include="CharacterEdit.cs" />
-    <Compile Include="CharacterListItem.cs" />
-    <Compile Include="JournalCreate.cs" />
-    <Compile Include="JournalDetail.cs" />
-    <Compile Include="JournalEdit.cs" />
-    <Compile Include="JournalListItem.cs" />
+    <Compile Include="CharacterModels\CharacterCreate.cs" />
+    <Compile Include="CharacterModels\CharacterDetail.cs" />
+    <Compile Include="CharacterModels\CharacterEdit.cs" />
+    <Compile Include="CharacterModels\CharacterListItem.cs" />
+    <Compile Include="JournalModels\JournalCreate.cs" />
+    <Compile Include="JournalModels\JournalDetail.cs" />
+    <Compile Include="JournalModels\JournalEdit.cs" />
+    <Compile Include="JournalModels\JournalListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +72,9 @@
       <Project>{7144C686-119D-4761-B50B-BA46E6BCBB5D}</Project>
       <Name>CharacterManager.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InventoryModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

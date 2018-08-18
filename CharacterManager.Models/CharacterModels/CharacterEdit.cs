@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterManager.Models
+namespace CharacterManager.Models.CharacterModels
 {
-    public class CharacterListItem
+    public class CharacterEdit
     {
         public int CharacterId { get; set; }
 
@@ -23,5 +23,7 @@ namespace CharacterManager.Models
 
         [Display(Name = "Class")]
         public Class CharacterClass { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

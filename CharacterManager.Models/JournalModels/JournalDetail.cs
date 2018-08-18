@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterManager.Models
+namespace CharacterManager.Models.JournalModels
 {
     public class JournalDetail
     {

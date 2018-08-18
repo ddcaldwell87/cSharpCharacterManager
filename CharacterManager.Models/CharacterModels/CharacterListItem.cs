@@ -6,24 +6,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterManager.Models
+namespace CharacterManager.Models.CharacterModels
 {
-    public class CharacterCreate
+    public class CharacterListItem
     {
-        [Required]
+        public int CharacterId { get; set; }
+
+        [Display(Name = "Name")]
         public string CharacterName { get; set; }
 
-        [Required]
+        [Display(Name = "Race")]
         public Race CharacterRace { get; set; }
 
-        [Required]
+        [Display(Name = "Gender")]
         public Gender CharacterGender { get; set; }
 
-        [Required]
+        [Display(Name = "Class")]
         public Class CharacterClass { get; set; }
-
-        public Journal Journal { get; set; }
-
-        public Inventory Inventory { get; set; }
     }
 }

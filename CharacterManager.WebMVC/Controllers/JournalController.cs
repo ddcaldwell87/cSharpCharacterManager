@@ -1,4 +1,4 @@
-﻿using CharacterManager.Models;
+﻿using CharacterManager.Models.JournalModels;
 using CharacterManager.Services;
 using Microsoft.AspNet.Identity;
 using System;

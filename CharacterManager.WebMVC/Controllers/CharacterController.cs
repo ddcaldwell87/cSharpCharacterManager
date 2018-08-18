@@ -1,5 +1,5 @@
 ﻿using CharacterManager.Data;
-using CharacterManager.Models;
+using CharacterManager.Models.CharacterModels;
 using CharacterManager.Services;
 using Microsoft.AspNet.Identity;
 using System;

@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterManager.Models
+namespace CharacterManager.Models.CharacterModels
 {
-    public class CharacterEdit
+    public class CharacterDetail
     {
         public int CharacterId { get; set; }
 
@@ -24,6 +24,8 @@ namespace CharacterManager.Models
         [Display(Name = "Class")]
         public Class CharacterClass { get; set; }
 
-        public DateTimeOffset? ModifiedUtc { get; set; }
+        public virtual ICollection<Journal> Journals { get; set; }
+
+        public virtual ICollection<Inventory> Inventories { get; set; }
     }
 }

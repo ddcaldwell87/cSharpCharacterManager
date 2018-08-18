@@ -1,24 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterManager.Models
+namespace CharacterManager.Models.JournalModels
 {
-    public class JournalCreate
+    public class JournalEdit
     {
-        [Required]
-        public Guid OwnerId { get; set; }
-
-        [Required]
+        public int JournalId { get; set; }
         public int CharacterId { get; set; }
-
-        [Required]
         public string Title { get; set; }
-
-        [Required]
         public string Content { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
