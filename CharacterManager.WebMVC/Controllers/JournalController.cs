@@ -14,7 +14,7 @@ namespace CharacterManager.WebMVC.Controllers
         // GET: Journal
         public ActionResult Index(int id)
         {
-            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var ownerId = GetGuid();
             var svc = new CharacterService(ownerId);
             var service = new JournalService(ownerId, id);
 
@@ -28,7 +28,7 @@ namespace CharacterManager.WebMVC.Controllers
             var model = new JournalCreate
             {
                 CharacterId = id,
-                OwnerId = Guid.Parse(User.Identity.GetUserId())
+                OwnerId = GetGuid()
             };
             return View(model);
         }
@@ -54,7 +54,7 @@ namespace CharacterManager.WebMVC.Controllers
 
         public ActionResult Details(int id)
         {
-            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var ownerId = GetGuid();
             var service = new JournalService(ownerId, id);
             var model = service.GetJournalById(id);
 
@@ -65,7 +65,7 @@ namespace CharacterManager.WebMVC.Controllers
 
         public ActionResult Edit(int id)
         {
-            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var ownerId = GetGuid();
             var service = new JournalService(ownerId);
             var detail = service.GetJournalById(id);
 
@@ -93,7 +93,7 @@ namespace CharacterManager.WebMVC.Controllers
                 return View(journal);
             }
 
-            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var ownerId = GetGuid();
             var service = new JournalService(ownerId);
 
             if (service.UpdateJournalEntry(journal))
@@ -106,11 +106,36 @@ namespace CharacterManager.WebMVC.Controllers
             return View();
         }
 
-        private JournalService CreateJournalService(JournalCreate journal)
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var ownerId = GetGuid();
+            var service = new JournalService(ownerId);
+            var model = service.GetJournalById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCharacter(int id)
         {
             var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalService(ownerId);
+            var model = service.GetJournalById(id);
+            return View(model);
+        }
+
+        private JournalService CreateJournalService(JournalCreate journal)
+        {
+            var ownerId = GetGuid();
             var service = new JournalService(ownerId, journal.CharacterId);
             return service;
+        }
+
+        private Guid GetGuid()
+        {
+            return Guid.Parse(User.Identity.GetUserId());
         }
     }
 }
