@@ -52,6 +52,60 @@ namespace CharacterManager.WebMVC.Controllers
             return View(journal);
         }
 
+        public ActionResult Details(int id)
+        {
+            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalService(ownerId, id);
+            var model = service.GetJournalById(id);
+
+            ViewBag.CharacterName = model.Title;
+
+            return View(model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalService(ownerId);
+            var detail = service.GetJournalById(id);
+
+            var model = new JournalEdit
+            {
+                JournalId = detail.JournalId,
+                CharacterId = detail.CharacterId,
+                Title = detail.Title,
+                Content = detail.Content,
+                ModifiedUtc = DateTimeOffset.Now
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, JournalEdit journal)
+        {
+            if (!ModelState.IsValid) return View(journal);
+
+            if (journal.JournalId != id)
+            {
+                ModelState.AddModelError("", "Id mismatch.");
+                return View(journal);
+            }
+
+            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalService(ownerId);
+
+            if (service.UpdateJournalEntry(journal))
+            {
+                TempData["SaveResult"] = "Your character has been updated.";
+                return RedirectToAction("Index", "Journal", new { id = journal.CharacterId }); // TODO: not passing CharacterId, passing JournalId
+            }
+
+            ModelState.AddModelError("", "Your character could not be updated.");
+            return View();
+        }
+
         private JournalService CreateJournalService(JournalCreate journal)
         {
             var ownerId = Guid.Parse(User.Identity.GetUserId());

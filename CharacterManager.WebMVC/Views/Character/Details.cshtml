@@ -4,10 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.CharacterName</h2>
 
 <div>
-    <h4>CharacterDetail</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -45,7 +44,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Journal", "Index", "Journal", new { id = Request.Url.Segments.Last() }, null) |
-    @Html.ActionLink("Edit", "Edit", new { Model.CharacterId }) |
+    @Html.ActionLink("Journal", "Index", "Journal", new { id = Model.CharacterId }, null) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CharacterId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

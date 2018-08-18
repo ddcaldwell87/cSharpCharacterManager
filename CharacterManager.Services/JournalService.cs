@@ -16,6 +16,11 @@ namespace CharacterManager.Services
 
         public JournalService(){}
 
+        public JournalService(Guid ownerId)
+        {
+            _ownerId = ownerId;
+        }
+
         public JournalService(Guid ownerId, int characterId)
         {
             _ownerId = ownerId;
@@ -57,17 +62,38 @@ namespace CharacterManager.Services
             }
         }
 
-        public bool DeleteJournalEntry(int journalId)
-        {
-            throw new NotImplementedException();
-        }
-
         public JournalDetail GetJournalById(int journalId)
         {
-            throw new NotImplementedException();
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Journals.Single(e => e.OwnerId == _ownerId && e.JournalId == journalId);
+                return new JournalDetail
+                {
+                    JournalId = entity.JournalId,
+                    CharacterId = entity.CharacterId,
+                    Title = entity.Title,
+                    Content = entity.Content,
+                    CreatedUtc = entity.CreatedUtc,
+                    ModifiedUtc = entity.ModifiedUtc
+                };
+            }
         }
 
         public bool UpdateJournalEntry(JournalEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Journals.Single(e => e.JournalId == model.JournalId && e.OwnerId == _ownerId);
+
+                entity.Title = model.Title;
+                entity.Content = model.Content;
+                entity.ModifiedUtc = DateTimeOffset.Now;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteJournalEntry(int journalId)
         {
             throw new NotImplementedException();
         }

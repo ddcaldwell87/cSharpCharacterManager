@@ -49,6 +49,9 @@ namespace CharacterManager.WebMVC.Controllers
         {
             var service = CreateCharacterService();
             var model = service.GetCharacterById(id);
+
+            ViewBag.CharacterName = model.CharacterName;
+
             return View(model);
         }
 
@@ -63,7 +66,8 @@ namespace CharacterManager.WebMVC.Controllers
                 CharacterName = detail.CharacterName,
                 CharacterRace = detail.CharacterRace,
                 CharacterGender = detail.CharacterGender,
-                CharacterClass = detail.CharacterClass
+                CharacterClass = detail.CharacterClass,
+                ModifiedUtc = DateTimeOffset.Now
             };
 
             return View(model);

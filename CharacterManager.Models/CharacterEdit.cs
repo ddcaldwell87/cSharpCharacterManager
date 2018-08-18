@@ -23,5 +23,7 @@ namespace CharacterManager.Models
 
         [Display(Name = "Class")]
         public Class CharacterClass { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
