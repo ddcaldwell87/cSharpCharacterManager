@@ -12,7 +12,8 @@ namespace CharacterManager.WebMVC.Controllers
     public class JournalController : Controller
     {
         // GET: Journal
-        public ActionResult Index(int id)
+        public ActionResult Index(int id
+            )
         {
             var ownerId = GetGuid();
             var svc = new CharacterService(ownerId);
@@ -118,12 +119,17 @@ namespace CharacterManager.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteCharacter(int id)
+        public ActionResult DeleteJournal(int id)
         {
-            var ownerId = Guid.Parse(User.Identity.GetUserId());
+            var ownerId = GetGuid();
             var service = new JournalService(ownerId);
-            var model = service.GetJournalById(id);
-            return View(model);
+            var journalId = service.GetJournalById(id);
+
+            service.DeleteJournalEntry(id);
+
+            TempData["SaveResult"] = "Your journal entry was deleted.";
+
+            return RedirectToAction("Index", new { id = journalId.CharacterId });
         }
 
         private JournalService CreateJournalService(JournalCreate journal)

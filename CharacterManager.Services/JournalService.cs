@@ -95,7 +95,14 @@ namespace CharacterManager.Services
 
         public bool DeleteJournalEntry(int journalId)
         {
-            throw new NotImplementedException();
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Journals.Single(e => e.JournalId == journalId && e.OwnerId == _ownerId);
+
+                ctx.Journals.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
         }
     }
 }
