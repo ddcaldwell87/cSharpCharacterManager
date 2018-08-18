@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IInventoryService.cs" />
     <Compile Include="ICharacterService.cs" />
     <Compile Include="IJournalService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

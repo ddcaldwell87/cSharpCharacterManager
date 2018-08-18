@@ -57,6 +57,10 @@
     <Compile Include="CharacterModels\CharacterDetail.cs" />
     <Compile Include="CharacterModels\CharacterEdit.cs" />
     <Compile Include="CharacterModels\CharacterListItem.cs" />
+    <Compile Include="InventoryModels\InventoryCreate.cs" />
+    <Compile Include="InventoryModels\InventoryEdit.cs" />
+    <Compile Include="InventoryModels\InventoryItemDetail.cs" />
+    <Compile Include="InventoryModels\InventoryListItem.cs" />
     <Compile Include="JournalModels\JournalCreate.cs" />
     <Compile Include="JournalModels\JournalDetail.cs" />
     <Compile Include="JournalModels\JournalEdit.cs" />
@@ -73,8 +77,6 @@
       <Name>CharacterManager.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="InventoryModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
