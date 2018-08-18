@@ -96,11 +96,12 @@ namespace CharacterManager.WebMVC.Controllers
 
             var ownerId = GetGuid();
             var service = new JournalService(ownerId);
+            var journalId = service.GetJournalById(id);
 
             if (service.UpdateJournalEntry(journal))
             {
                 TempData["SaveResult"] = "Your character has been updated.";
-                return RedirectToAction("Index", "Journal", new { id = journal.CharacterId }); // TODO: not passing CharacterId, passing JournalId
+                return RedirectToAction("Index", "Journal", new { id = journalId.CharacterId }); // TODO: not passing CharacterId, passing JournalId
             }
 
             ModelState.AddModelError("", "Your character could not be updated.");
