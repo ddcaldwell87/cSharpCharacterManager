@@ -14,6 +14,8 @@ namespace CharacterManager.Data
 
         public int CharacterId { get; set; }
 
+        public Guid OwnerId { get; set; }
+
         [Required]
         public string ItemName { get; set; }
 
