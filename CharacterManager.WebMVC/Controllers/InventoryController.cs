@@ -122,8 +122,7 @@ namespace CharacterManager.WebMVC.Controllers
 
         private InventoryService CreateInventoryService(InventoryCreate item)
         {
-            var ownerId = GetGuid();
-            var service = new InventoryService(ownerId, item.CharacterId);
+            var service = new InventoryService(GetGuid(), item.CharacterId);
             return service;
         }
 

@@ -14,9 +14,8 @@ namespace CharacterManager.WebMVC.Controllers
         // GET: Journal
         public ActionResult Index(int id)
         {
-            var ownerId = GetGuid();
-            var svc = new CharacterService(ownerId);
-            var service = new JournalService(ownerId, id);
+            var svc = new CharacterService(GetGuid());
+            var service = new JournalService(GetGuid(), id);
 
             ViewBag.CharacterName = svc.GetCharacterById(id).CharacterName;
 
@@ -54,8 +53,7 @@ namespace CharacterManager.WebMVC.Controllers
 
         public ActionResult Details(int id)
         {
-            var ownerId = GetGuid();
-            var service = new JournalService(ownerId, id).GetJournalById(id);
+            var service = new JournalService(GetGuid(), id).GetJournalById(id);
 
             ViewBag.CharacterName = service.Title;
 
@@ -64,8 +62,7 @@ namespace CharacterManager.WebMVC.Controllers
 
         public ActionResult Edit(int id)
         {
-            var ownerId = GetGuid();
-            var service = new JournalService(ownerId).GetJournalById(id);
+            var service = new JournalService(GetGuid()).GetJournalById(id);
 
             var model = new JournalEdit
             {
@@ -91,8 +88,7 @@ namespace CharacterManager.WebMVC.Controllers
                 return View(journal);
             }
 
-            var ownerId = GetGuid();
-            var service = new JournalService(ownerId);
+            var service = new JournalService(GetGuid());
             var journalId = service.GetJournalById(id);
 
             if (service.UpdateJournalEntry(journal))
@@ -108,10 +104,8 @@ namespace CharacterManager.WebMVC.Controllers
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var ownerId = GetGuid();
-            var service = new JournalService(ownerId);
-            var model = service.GetJournalById(id);
-            return View(model);
+            var journal = new JournalService(GetGuid()).GetJournalById(id);
+            return View(journal);
         }
 
         [HttpPost]
@@ -119,8 +113,7 @@ namespace CharacterManager.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteJournal(int id)
         {
-            var ownerId = GetGuid();
-            var service = new JournalService(ownerId);
+            var service = new JournalService(GetGuid());
             var journalId = service.GetJournalById(id);
 
             service.DeleteJournalEntry(id);
@@ -132,8 +125,7 @@ namespace CharacterManager.WebMVC.Controllers
 
         private JournalService CreateJournalService(JournalCreate journal)
         {
-            var ownerId = GetGuid();
-            var service = new JournalService(ownerId, journal.CharacterId);
+            var service = new JournalService(GetGuid(), journal.CharacterId);
             return service;
         }
 
