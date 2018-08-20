@@ -60,11 +60,11 @@ namespace CharacterManager.Services
             }
         }
 
-        public InventoryItemDetail GetInventoryItemById(int itemId)
+        public InventoryItemDetail GetInventoryItemById(int inventoryId)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Inventories.Single(e => e.OwnerId == _ownerId && e.InventoryId == itemId);
+                var entity = ctx.Inventories.Single(e => e.OwnerId == _ownerId && e.InventoryId == inventoryId);
                 return new InventoryItemDetail
                 {
                     InventoryId = entity.InventoryId,

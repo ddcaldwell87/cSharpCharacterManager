@@ -12,8 +12,7 @@ namespace CharacterManager.WebMVC.Controllers
     public class JournalController : Controller
     {
         // GET: Journal
-        public ActionResult Index(int id
-            )
+        public ActionResult Index(int id)
         {
             var ownerId = GetGuid();
             var svc = new CharacterService(ownerId);
@@ -56,26 +55,24 @@ namespace CharacterManager.WebMVC.Controllers
         public ActionResult Details(int id)
         {
             var ownerId = GetGuid();
-            var service = new JournalService(ownerId, id);
-            var model = service.GetJournalById(id);
+            var service = new JournalService(ownerId, id).GetJournalById(id);
 
-            ViewBag.CharacterName = model.Title;
+            ViewBag.CharacterName = service.Title;
 
-            return View(model);
+            return View(service);
         }
 
         public ActionResult Edit(int id)
         {
             var ownerId = GetGuid();
-            var service = new JournalService(ownerId);
-            var detail = service.GetJournalById(id);
+            var service = new JournalService(ownerId).GetJournalById(id);
 
             var model = new JournalEdit
             {
-                JournalId = detail.JournalId,
-                CharacterId = detail.CharacterId,
-                Title = detail.Title,
-                Content = detail.Content,
+                JournalId = service.JournalId,
+                CharacterId = service.CharacterId,
+                Title = service.Title,
+                Content = service.Content,
                 ModifiedUtc = DateTimeOffset.Now
             };
 
