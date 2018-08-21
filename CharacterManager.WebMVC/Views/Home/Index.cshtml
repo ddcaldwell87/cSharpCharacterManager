@@ -1,20 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="jumbotron">
-    <div class="container">
-        <h1>D&amp;D Character Manager</h1>
-        <p class="lead">Keep track of your character sheets, inventory items, and journal entries.</p>
-        @if (!User.Identity.IsAuthenticated)
-        {
-        <div>
-            @Html.ActionLink("Log In", "Login", "Account", null, new { @class = "btn btn-default" })
-            @Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-danger" })
-        </div>
-        }
-    </div>
-</div>
+    
 
 <div class="container">
     <div class="row">
