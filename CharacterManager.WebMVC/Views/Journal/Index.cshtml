@@ -4,8 +4,6 @@
     ViewBag.Title = "Index";
 }
 
-<h2>@ViewBag.CharacterName's Journal Entries</h2>
-
 <p>
     @Html.ActionLink("Create New", "Create", new { id = Request.Url.Segments.Last() }) | 
     @Html.ActionLink("Go Back", "Details", "Character", new { id = Request.Url.Segments.Last() }, null)

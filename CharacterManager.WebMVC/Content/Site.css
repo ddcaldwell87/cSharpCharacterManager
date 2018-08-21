@@ -1,4 +1,5 @@
 ﻿body {
+    background-color: antiquewhite;
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Lato', sans-serif;
@@ -50,4 +51,19 @@ textarea {
     text-align: center;
     margin-bottom: 2%;
     font-size: 3em;
+}
+
+#character {
+    background: url(Images/DnD_MM_Art.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#journal {
+    background: url(Images/DnD_PHB_Art.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#inventory {
+    background: url(Images/DnD_DMG_Art.jpg) center no-repeat;
+    background-size: cover;
 }
