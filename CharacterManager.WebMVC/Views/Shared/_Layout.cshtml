@@ -31,21 +31,48 @@
         </div>
     </div>
     @{
-            string name = Html.CurrentViewName();
-            string controller = Html.CurrentController();
-            if (name == "Index" && controller == "HomeController")
-            {
+        string name = Html.CurrentViewName();
+        string controller = Html.CurrentController();
+        if (name == "Index" && controller == "HomeController")
+        {
             <div class="jumbotron">
                 <div class="container">
                     <h1>D&amp;D Character Manager</h1>
                     <p class="lead">Keep track of your character sheets, inventory items, and journal entries.</p>
                     @if (!User.Identity.IsAuthenticated)
-        {
+                    {
                         <div>
                             @Html.ActionLink("Log In", "Login", "Account", null, new { @class = "btn btn-default" })
                             @Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-danger" })
                         </div>
                     }
+                </div>
+            </div>
+        }
+        else if (name == "Index" && controller == "CharacterController")
+        {
+            <div class="jumbotron" id="character">
+                <div class="container">
+                    <h1>Characters</h1>
+                    @*<p class="lead"></p>*@
+                </div>
+            </div>
+        }
+        else if (name == "Index" && controller == "JournalController")
+        {
+            <div class="jumbotron" id="journal">
+                <div class="container">
+                    <h1>@ViewBag.CharacterName's Journal Entries</h1>
+                    @*<p class="lead"></p>*@
+                </div>
+            </div>
+        }
+        else if (name == "Index" && controller == "InventoryController")
+        {
+            <div class="jumbotron" id="inventory">
+                <div class="container">
+                    <h1>@ViewBag.CharacterName's Inventory Items</h1>
+                    @*<p class="lead"></p>*@
                 </div>
             </div>
         }
