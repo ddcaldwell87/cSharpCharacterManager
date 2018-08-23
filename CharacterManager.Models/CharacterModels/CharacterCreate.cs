@@ -22,8 +22,18 @@ namespace CharacterManager.Models.CharacterModels
         [Required]
         public Class CharacterClass { get; set; }
 
-        public Journal Journal { get; set; }
+        [Required]
+        public Alignment Alignment { get; set; }
 
+        [Required]
+        public int HitPoints { get; set; }
+
+        public string PersonalityTraits { get; set; }
+        public string Ideals { get; set; }
+        public string Bonds { get; set; }
+        public string Flaws { get; set; }
+
+        public Journal Journal { get; set; }
         public Inventory Inventory { get; set; }
     }
 }

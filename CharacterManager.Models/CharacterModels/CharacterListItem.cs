@@ -23,5 +23,16 @@ namespace CharacterManager.Models.CharacterModels
 
         [Display(Name = "Class")]
         public Class CharacterClass { get; set; }
+
+        [Required]
+        public Alignment Alignment { get; set; }
+
+        [Required]
+        public int HitPoints { get; set; }
+
+        public string PersonalityTraits { get; set; }
+        public string Ideals { get; set; }
+        public string Bonds { get; set; }
+        public string Flaws { get; set; }
     }
 }

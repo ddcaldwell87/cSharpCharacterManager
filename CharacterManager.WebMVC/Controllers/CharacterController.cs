@@ -67,6 +67,12 @@ namespace CharacterManager.WebMVC.Controllers
                 CharacterRace = detail.CharacterRace,
                 CharacterGender = detail.CharacterGender,
                 CharacterClass = detail.CharacterClass,
+                Alignment = detail.Alignment,
+                PersonalityTraits = detail.PersonalityTraits,
+                Ideals = detail.Ideals,
+                Bonds = detail.Bonds,
+                Flaws = detail.Flaws,
+                HitPoints = detail.HitPoints,
                 ModifiedUtc = DateTimeOffset.Now
             };
 

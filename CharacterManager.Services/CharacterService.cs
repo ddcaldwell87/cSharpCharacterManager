@@ -26,7 +26,13 @@ namespace CharacterManager.Services
                 CharacterName = model.CharacterName,
                 CharacterRace = model.CharacterRace,
                 CharacterGender = model.CharacterGender,
-                CharacterClass = model.CharacterClass
+                CharacterClass = model.CharacterClass,
+                Alignment = model.Alignment,
+                PersonalityTraits = model.PersonalityTraits,
+                Ideals = model.Ideals,
+                Bonds = model.Bonds,
+                Flaws = model.Flaws,
+                HitPoints = model.HitPoints
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -47,7 +53,13 @@ namespace CharacterManager.Services
                         CharacterName = e.CharacterName,
                         CharacterRace = e.CharacterRace,
                         CharacterGender = e.CharacterGender,
-                        CharacterClass = e.CharacterClass
+                        CharacterClass = e.CharacterClass,
+                        Alignment = e.Alignment,
+                        PersonalityTraits = e.PersonalityTraits,
+                        Ideals = e.Ideals,
+                        Bonds = e.Bonds,
+                        Flaws = e.Flaws,
+                        HitPoints = e.HitPoints
                     });
                 return query.ToArray();
             }
@@ -64,7 +76,13 @@ namespace CharacterManager.Services
                     CharacterName = entity.CharacterName,
                     CharacterRace = entity.CharacterRace,
                     CharacterGender = entity.CharacterGender,
-                    CharacterClass = entity.CharacterClass
+                    CharacterClass = entity.CharacterClass,
+                    Alignment = entity.Alignment,
+                    PersonalityTraits = entity.PersonalityTraits,
+                    Ideals = entity.Ideals,
+                    Bonds = entity.Bonds,
+                    Flaws = entity.Flaws,
+                    HitPoints = entity.HitPoints
                 };
             }
         }
@@ -79,6 +97,12 @@ namespace CharacterManager.Services
                 entity.CharacterRace = model.CharacterRace;
                 entity.CharacterGender = model.CharacterGender;
                 entity.CharacterClass = model.CharacterClass;
+                entity.Alignment = model.Alignment,
+                entity.PersonalityTraits = model.PersonalityTraits,
+                entity.Ideals = model.Ideals;
+                entity.Bonds = model.Bonds;
+                entity.Flaws = model.Flaws;
+                entity.HitPoints = model.HitPoints;
 
                 return ctx.SaveChanges() == 1;
             }
