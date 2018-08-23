@@ -5,8 +5,9 @@
 }
 
 <p>
-    @Html.ActionLink("Create New", "Create", new { id = Request.Url.Segments.Last() }) | 
-    @Html.ActionLink("Go Back", "Details", "Character", new { id = Request.Url.Segments.Last() }, null)
+    @Html.ActionLink("Create New", "Create", new { id = Request.Url.Segments.Last() }) |
+    @Html.ActionLink("Go Back", "Details", "Character", new { id = Request.Url.Segments.Last() }, null) |
+    @Html.ActionLink("Back to Characters", "Index", "Character")
 </p>
 
 @if (TempData.ContainsKey("SaveResult"))
@@ -47,9 +48,9 @@
                 @Html.DisplayFor(modelItem => item.CreatedUtc)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.JournalId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.JournalId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.JournalId })
+                @Html.ActionLink("Edit", "Edit", new { id = item.JournalId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.JournalId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.JournalId })
             </td>
         </tr>
     }

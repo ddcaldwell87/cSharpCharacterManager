@@ -97,8 +97,8 @@ namespace CharacterManager.Services
                 entity.CharacterRace = model.CharacterRace;
                 entity.CharacterGender = model.CharacterGender;
                 entity.CharacterClass = model.CharacterClass;
-                entity.Alignment = model.Alignment,
-                entity.PersonalityTraits = model.PersonalityTraits,
+                entity.Alignment = model.Alignment;
+                entity.PersonalityTraits = model.PersonalityTraits;
                 entity.Ideals = model.Ideals;
                 entity.Bonds = model.Bonds;
                 entity.Flaws = model.Flaws;

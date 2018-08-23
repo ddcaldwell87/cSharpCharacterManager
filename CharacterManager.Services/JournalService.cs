@@ -56,7 +56,8 @@ namespace CharacterManager.Services
                         CharacterId = e.CharacterId,
                         Title = e.Title,
                         Content = e.Content,
-                        CreatedUtc = e.CreatedUtc
+                        CreatedUtc = e.CreatedUtc,
+                        ModifiedUtc = e.ModifiedUtc
                     });
                 return query.ToArray();
             }

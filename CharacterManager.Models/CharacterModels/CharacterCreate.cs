@@ -11,23 +11,29 @@ namespace CharacterManager.Models.CharacterModels
     public class CharacterCreate
     {
         [Required]
+        [Display(Name = "Name")]
         public string CharacterName { get; set; }
 
         [Required]
+        [Display(Name = "Race")]
         public Race CharacterRace { get; set; }
 
         [Required]
+        [Display(Name = "Gender")]
         public Gender CharacterGender { get; set; }
 
         [Required]
+        [Display(Name = "Class")]
         public Class CharacterClass { get; set; }
 
         [Required]
         public Alignment Alignment { get; set; }
 
         [Required]
+        [Display(Name = "Hit Points")]
         public int HitPoints { get; set; }
 
+        [Display(Name = "Personality Traits")]
         public string PersonalityTraits { get; set; }
         public string Ideals { get; set; }
         public string Bonds { get; set; }

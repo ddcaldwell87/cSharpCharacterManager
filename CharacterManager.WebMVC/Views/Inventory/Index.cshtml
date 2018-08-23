@@ -6,7 +6,8 @@
 
 <p>
     @Html.ActionLink("Create New", "Create", new { id = Request.Url.Segments.Last() }) |
-    @Html.ActionLink("Go Back", "Details", "Character", new { id = Request.Url.Segments.Last() }, null)
+    @Html.ActionLink("Go Back", "Details", "Character", new { id = Request.Url.Segments.Last() }, null) |
+    @Html.ActionLink("Back to Characters", "Index", "Character")
 </p>
 
 @if (TempData.ContainsKey("SaveResult"))

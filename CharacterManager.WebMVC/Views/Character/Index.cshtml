@@ -33,30 +33,38 @@
         <th>
             @Html.DisplayNameFor(model => model.CharacterClass)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alignment)
+        </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CharacterName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CharacterRace)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CharacterGender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CharacterClass)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.CharacterId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.CharacterId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.CharacterId })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CharacterName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CharacterRace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CharacterGender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CharacterClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alignment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.CharacterId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CharacterId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CharacterId }) |
+            @Html.ActionLink("Journal", "Index", "Journal", new { id = item.CharacterId }, null) |
+            @Html.ActionLink("Inventory", "Index", "Inventory", new { id = item.CharacterId }, null)
+        </td>
+    </tr>
     }
 
 </table>

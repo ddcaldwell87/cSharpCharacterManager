@@ -28,8 +28,10 @@ namespace CharacterManager.Models.CharacterModels
         public Alignment Alignment { get; set; }
 
         [Required]
+        [Display(Name = "Hit Points")]
         public int HitPoints { get; set; }
 
+        [Display(Name = "Personality Traits")]
         public string PersonalityTraits { get; set; }
         public string Ideals { get; set; }
         public string Bonds { get; set; }

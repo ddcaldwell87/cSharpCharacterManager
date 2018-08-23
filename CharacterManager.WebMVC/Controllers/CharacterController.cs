@@ -72,8 +72,7 @@ namespace CharacterManager.WebMVC.Controllers
                 Ideals = detail.Ideals,
                 Bonds = detail.Bonds,
                 Flaws = detail.Flaws,
-                HitPoints = detail.HitPoints,
-                ModifiedUtc = DateTimeOffset.Now
+                HitPoints = detail.HitPoints
             };
 
             return View(model);

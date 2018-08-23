@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201808201500018_addedInventoryOwnerId.Designer.cs">
       <DependentUpon>201808201500018_addedInventoryOwnerId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808232018248_addedPropertiesToCharacter.cs" />
+    <Compile Include="Migrations\201808232018248_addedPropertiesToCharacter.Designer.cs">
+      <DependentUpon>201808232018248_addedPropertiesToCharacter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808201500018_addedInventoryOwnerId.resx">
       <DependentUpon>201808201500018_addedInventoryOwnerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808232018248_addedPropertiesToCharacter.resx">
+      <DependentUpon>201808232018248_addedPropertiesToCharacter.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
