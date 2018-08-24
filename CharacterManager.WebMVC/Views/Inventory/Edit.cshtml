@@ -21,7 +21,7 @@
     @Html.HiddenFor(model => model.OwnerId)
 
     <div class="form-group">
-        @Html.LabelFor(model => model.ItemName, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.ItemName, "Item Name*", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ItemName, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.ItemName, "", new { @class = "text-danger" })
@@ -29,7 +29,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.ItemQuantity, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.ItemQuantity, "Item Quantity*", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ItemQuantity, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.ItemQuantity, "", new { @class = "text-danger" })
@@ -37,7 +37,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.ItemType, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.ItemType, "Item Type*", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ItemType, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.ItemType, "", new { @class = "text-danger" })
