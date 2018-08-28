@@ -1,6 +1,4 @@
 ﻿body {
-    background: url(Images/roots.jpeg) center no-repeat;
-    background-size: cover;
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Lato', sans-serif;
@@ -11,7 +9,7 @@ ul {
     list-style: none;
 }
 
-h1, h2, h3 {
+h1, h2, h3, dt {
     font-family: 'Sawarabi Mincho', sans-serif;
 }
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -38,11 +36,19 @@ textarea {
     background-size: cover;
 }
 
+.jumbotron {
+    text-align: center;
+}
+
 .jumbotron h1, .jumbotron p {
     display: inline-block;
     color: #eee;
     background-color: rgba(0,0,0,0.6);
     padding: 1%;
+}
+
+.links {
+    margin-top: 20px;
 }
 
 .col-md-4 h2 {
@@ -53,6 +59,31 @@ textarea {
     font-size: 1.1em;
 }
 
+.char-info {
+    font-size: 0.9em;
+}
+
+.list-group-item {
+    font-size: 1.3em;
+}
+
+.stat-circle {
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 1.4em;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+.skills, .saving-throws {
+    font-size: 0.8em;
+}
+
+.hit-stats {
+    font-size: 1.4em;
+}
+
 #features {
     text-align: center;
     margin-bottom: 2%;
@@ -60,7 +91,8 @@ textarea {
 }
 
 #character {
-    background:none;
+    background: url(Images/DFS_poster1.jpg) center no-repeat;
+    background-size: cover;
 }
 
 #journal {
@@ -95,8 +127,4 @@ textarea {
 
 .character-card p {
     display: inline;
-}
-
-footer {
-    color: #F5F1ED;
 }

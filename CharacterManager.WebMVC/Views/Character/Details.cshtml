@@ -4,97 +4,307 @@
     ViewBag.Title = "Details";
 }
 
-<h2>@ViewBag.CharacterName</h2>
+<ol class="breadcrumb">
+    <li>@Html.ActionLink("Characters", "Index")</li>
+    <li class="active">@ViewBag.CharacterName</li>
 
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CharacterName)
-        </dt>
+    <li class="pull-right">@Html.ActionLink("Delete", "Delete", new { id = Model.CharacterId })</li>
+    <li class="pull-right">@Html.ActionLink("Edit", "Edit", new { id = Model.CharacterId })</li>
+</ol>
 
-        <dd>
-            @Html.DisplayFor(model => model.CharacterName)
-        </dd>
+<section class="row">
+    <div class="col-md-12">
+        <div class="panel panel-danger char-info">
+            <ul class="list-group panel-body">
+                <li class="list-group-item">
+                    <span class="badge">@Html.DisplayNameFor(model => model.CharacterRace)</span>
+                    @{ var race = Model.CharacterRace.GetDisplayName(); }
+                    @Html.DisplayFor(model => race)
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">@Html.DisplayNameFor(model => model.CharacterGender)</span>
+                    @Html.DisplayFor(model => model.CharacterGender)
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">@Html.DisplayNameFor(model => model.CharacterClass)</span>
+                    @Html.DisplayFor(model => model.CharacterClass)
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">@Html.DisplayNameFor(model => model.Alignment)</span>
+                    @{ var alignment = Model.Alignment.GetDisplayName(); }
+                    @Html.DisplayFor(model => alignment)
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CharacterRace)
-        </dt>
+<section class="row">
+    <aside class="col-md-3">
+        <div class="panel panel-danger">
+            <ul class="panel-body text-center">
+                <li>
+                    <h3>Strength</h3>
+                    <div class="stat-circle">13</div>
+                    <span class="badge">+2</span>
+                </li>
+                <li>
+                    <h3>Dexterity</h3>
+                    <div class="stat-circle">18</div>
+                    <span class="badge">+4</span>
+                </li>
+                <li>
+                    <h3>Constitution</h3>
+                    <div class="stat-circle">16</div>
+                    <span class="badge">+2</span>
+                </li>
+                <li>
+                    <h3>Intelligence</h3>
+                    <div class="stat-circle">14</div>
+                    <span class="badge">+2</span>
+                </li>
+                <li>
+                    <h3>Wisdom</h3>
+                    <div class="stat-circle">9</div>
+                    <span class="badge">+2</span>
+                </li>
+                <li>
+                    <h3>Charisma</h3>
+                    <div class="stat-circle">9</div>
+                    <span class="badge">+2</span>
+                </li>
+            </ul>
+        </div>
+    </aside>
 
-        <dd>
-            @Html.DisplayFor(model => model.CharacterRace)
-        </dd>
+    <div class="col-md-4">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                Saving Throws
+            </div>
+            <ul class="list-group panel-body saving-throws">
+                <li class="list-group-item">
+                    <span class="badge">+3</span>
+                    Strength
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">+3</span>
+                    Dexterity
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">+3</span>
+                    Constitution
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">+3</span>
+                    Intelligence
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">+3</span>
+                    Wisdom
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">+3</span>
+                    Charisma
+                </li>
+            </ul>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CharacterGender)
-        </dt>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        Skills
+                    </div>
+                    <ul class="list-group panel-body skills">
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Acrobatics <small>(Dex)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Animal Handling <small>(Wis)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Arcana <small>(Int)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Athletics <small>(Str)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Deception <small>(Cha)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            History <small>(Int)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Insight <small>(Wis)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Intimidation <small>(Cha)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Investigation <small>(Int)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Medicine <small>(Wis)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Nature <small>(Int)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Perception <small>(Wis)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Performance <small>(Cha)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Persuasion <small>(Cha)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Religion <small>(Int)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Sleight Of Hand <small>(Dex)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Stealth <small>(Dex)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">+1</span>
+                            Survival <small>(Wis)</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.CharacterGender)
-        </dd>
+    <div class="col-md-5">
+        <div class="panel panel-danger">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Armor Class
+                            </div>
+                            <div class="panel-body hit-stats">
+                                5
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Initiative
+                            </div>
+                            <div class="panel-body hit-stats">
+                                12
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Speed
+                            </div>
+                            <div class="panel-body hit-stats">
+                                5
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CharacterClass)
-        </dt>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                @Html.DisplayNameFor(model => model.HitPoints)
+                            </div>
+                            <div class="panel-body hit-stats">
+                                @Html.DisplayFor(model => model.HitPoints)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.CharacterClass)
-        </dd>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.PersonalityTraits)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.PersonalityTraits)
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Alignment)
-        </dt>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.Ideals)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.Ideals)
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Alignment)
-        </dd>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.Bonds)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.Bonds)
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HitPoints)
-        </dt>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.Flaws)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.Flaws)
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.HitPoints)
-        </dd>
+    </div>
+</section>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PersonalityTraits)
-        </dt>
+<ol class="breadcrumb">
+    <li>@Html.ActionLink("Characters", "Index")</li>
+    <li class="active">@ViewBag.CharacterName</li>
 
-        <dd>
-            @Html.DisplayFor(model => model.PersonalityTraits)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Ideals)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Ideals)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Bonds)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Bonds)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Flaws)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Flaws)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Journal", "Index", "Journal", new { id = Model.CharacterId }, null) |
-    @Html.ActionLink("Inventory", "Index", "Inventory", new { id = Model.CharacterId }, null) |
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CharacterId }) |
-    @Html.ActionLink("Delete", "Delete", new { id = Model.CharacterId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <li class="pull-right">@Html.ActionLink("Delete", "Delete", new { id = Model.CharacterId })</li>
+    <li class="pull-right">@Html.ActionLink("Edit", "Edit", new { id = Model.CharacterId })</li>
+</ol>

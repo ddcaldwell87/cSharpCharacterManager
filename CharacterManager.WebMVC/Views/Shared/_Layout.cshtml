@@ -49,12 +49,26 @@
                 </div>
             </div>
         }
+        else if (name == "Details" && controller == "CharacterController")
+        {
+            <div class="jumbotron" id="character">
+                <div class="container">
+                    <h1>@ViewBag.CharacterName</h1>
+                    <div class="links">
+                        @Html.ActionLink("Journal", "Index", "Journal", new { id = Model.CharacterId }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("Inventory", "Index", "Inventory", new { id = Model.CharacterId }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        }
         else if (name == "Index" && controller == "JournalController")
         {
             <div class="jumbotron" id="journal">
                 <div class="container">
                     <h1>@ViewBag.CharacterName's Journal Entries</h1>
-                    @*<p class="lead"></p>*@
+                    <div class="links">
+                        @Html.ActionLink("New Entry", "Create", new { id = Request.Url.Segments.Last() }, new { @class = "btn btn-default" })
+                    </div>
                 </div>
             </div>
         }
@@ -63,7 +77,9 @@
             <div class="jumbotron" id="inventory">
                 <div class="container">
                     <h1>@ViewBag.CharacterName's Inventory Items</h1>
-                    @*<p class="lead"></p>*@
+                    <div class="links">
+                        @Html.ActionLink("New Item", "Create", new { id = Request.Url.Segments.Last() }, new { @class = "btn btn-default" })
+                    </div>
                 </div>
             </div>
         }

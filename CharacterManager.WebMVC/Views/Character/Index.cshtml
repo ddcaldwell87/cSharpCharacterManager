@@ -31,6 +31,7 @@
     <div class="row">
         @foreach (var item in Model)
         {
+            var race = item.CharacterRace.GetDisplayName();
         <div class="col-md-6">
             <div class="character-card">
                 <h2>
@@ -43,7 +44,7 @@
                     @Html.DisplayFor(modelItem => item.CharacterGender)
                 </p>
                 <p>
-                    @Html.DisplayFor(modelItem => item.CharacterRace)
+                    @Html.DisplayFor(modelItem => race)
                 </p>
             </div>
         </div>
