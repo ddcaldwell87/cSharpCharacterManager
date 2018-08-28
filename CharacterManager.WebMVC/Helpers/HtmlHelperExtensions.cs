@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CharacterManager.Data;
+using CharacterManager.Models.CharacterModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

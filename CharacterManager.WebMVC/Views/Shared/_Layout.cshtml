@@ -35,7 +35,7 @@
         string controller = Html.CurrentController();
         if (name == "Index" && controller == "HomeController")
         {
-            <div class="jumbotron">
+            <div class="jumbotron home">
                 <div class="container">
                     <h1>D&amp;D Character Manager</h1>
                     <p class="lead">Keep track of your character sheets, inventory items, and journal entries.</p>
@@ -46,15 +46,6 @@
                             @Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-danger" })
                         </div>
                     }
-                </div>
-            </div>
-        }
-        else if (name == "Index" && controller == "CharacterController")
-        {
-            <div class="jumbotron" id="character">
-                <div class="container">
-                    <h1>Characters</h1>
-                    @*<p class="lead"></p>*@
                 </div>
             </div>
         }

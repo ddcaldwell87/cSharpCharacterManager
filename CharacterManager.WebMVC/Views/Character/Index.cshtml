@@ -4,9 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -19,52 +17,40 @@
     </div>
 }
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CharacterName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CharacterRace)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CharacterGender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CharacterClass)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Alignment)
-        </th>
-        <th></th>
-    </tr>
+    <div class="jumbotron" id="character">
+        <div class="container">
+            <h1>Characters</h1>
+            @*<p class="lead"></p>*@
+        </div>
+    </div>
 
-    @foreach (var item in Model)
-    {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CharacterName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CharacterRace)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CharacterGender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CharacterClass)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Alignment)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.CharacterId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.CharacterId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.CharacterId }) |
-            @Html.ActionLink("Journal", "Index", "Journal", new { id = item.CharacterId }, null) |
-            @Html.ActionLink("Inventory", "Index", "Inventory", new { id = item.CharacterId }, null)
-        </td>
-    </tr>
-    }
+    <p>
+        @Html.ActionLink("New Character", "Create", null, new { @class="btn btn-danger" })
+    </p>
 
-</table>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+        <div class="col-md-6">
+            <div class="character-card">
+                <h2>
+                    @Html.ActionLink(item.CharacterName, "Details", new { id = item.CharacterId })
+                </h2>
+                <h4>
+                    @Html.DisplayFor(modelItem => item.CharacterClass)
+                </h4>
+                <p>
+                    @Html.DisplayFor(modelItem => item.CharacterGender)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.CharacterRace)
+                </p>
+            </div>
+        </div>
+        }
+    </div>
+@*@Html.ActionLink("Edit", "Edit", new { id = item.CharacterId }) |
+@Html.ActionLink("Details", "Details", new { id = item.CharacterId }) |
+@Html.ActionLink("Delete", "Delete", new { id = item.CharacterId }) |
+@Html.ActionLink("Journal", "Index", "Journal", new { id = item.CharacterId }, null) |
+@Html.ActionLink("Inventory", "Index", "Inventory", new { id = item.CharacterId }, null)*@

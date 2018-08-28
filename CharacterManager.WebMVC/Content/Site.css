@@ -1,8 +1,14 @@
 ﻿body {
-    background-color: antiquewhite;
+    background: url(Images/roots.jpeg) center no-repeat;
+    background-size: cover;
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 h1, h2, h3 {
@@ -27,7 +33,7 @@ textarea {
     margin-right: 1%;
 }
 
-.jumbotron {
+.home {
     background: url(Images/DnD_Starter_Art.jpg) center no-repeat;
     background-size: cover;
 }
@@ -54,8 +60,7 @@ textarea {
 }
 
 #character {
-    background: url(Images/DnD_MM_Art.jpg) center no-repeat;
-    background-size: cover;
+    background:none;
 }
 
 #journal {
@@ -66,4 +71,32 @@ textarea {
 #inventory {
     background: url(Images/DnD_DMG_Art.jpg) center no-repeat;
     background-size: cover;
+}
+
+.character-card {
+    background-color: #F5F1ED;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    padding: 5px;
+    margin-bottom: 3%;
+    color: #654C4F;
+}
+
+.character-card a {
+    color: #B26E63;
+}
+
+.character-card h2 {
+    text-align: center;
+}
+
+.character-card h4 {
+    text-align: center;
+}
+
+.character-card p {
+    display: inline;
+}
+
+footer {
+    color: #F5F1ED;
 }

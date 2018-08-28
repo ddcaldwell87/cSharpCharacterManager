@@ -204,6 +204,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EnumExtensions.cs" />
     <Compile Include="Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -221,6 +222,7 @@
     <Content Include="Content\Images\DnD_Starter_Art.jpg" />
     <Content Include="Content\Images\paper-1074136_1920.jpg" />
     <Content Include="Content\Images\parchment-481114_1920.jpg" />
+    <Content Include="Content\Images\roots.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

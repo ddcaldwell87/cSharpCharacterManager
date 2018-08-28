@@ -20,7 +20,6 @@ namespace CharacterManager.WebMVC.Controllers
             var model = service.GetCharacters();
             return View(model);
         }
-        //hi
         public ActionResult Create()
         {
             return View();
