@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201808281443331_addedDisplayAnnotations.Designer.cs">
       <DependentUpon>201808281443331_addedDisplayAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808291355046_addedAttributes.cs" />
+    <Compile Include="Migrations\201808291355046_addedAttributes.Designer.cs">
+      <DependentUpon>201808291355046_addedAttributes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808281443331_addedDisplayAnnotations.resx">
       <DependentUpon>201808281443331_addedDisplayAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808291355046_addedAttributes.resx">
+      <DependentUpon>201808291355046_addedAttributes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

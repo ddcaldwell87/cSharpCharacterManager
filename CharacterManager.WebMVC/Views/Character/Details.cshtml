@@ -44,33 +44,35 @@
         <div class="panel panel-danger">
             <ul class="panel-body text-center">
                 <li>
-                    <h3>Strength</h3>
-                    <div class="stat-circle">13</div>
-                    <span class="badge">+2</span>
+                    <h3>@Html.DisplayNameFor(model => model.Strength)</h3>
+                    <div class="stat-circle">@Html.DisplayFor(model => model.Strength)</div>
+                    <span class="badge">
+                        @{ var strMod =  }
+                    </span>
                 </li>
                 <li>
-                    <h3>Dexterity</h3>
-                    <div class="stat-circle">18</div>
+                    <h3>@Html.DisplayNameFor(model => model.Dexterity)</h3>
+                    <div class="stat-circle">@Html.DisplayFor(model => model.Dexterity)</div>
                     <span class="badge">+4</span>
                 </li>
                 <li>
-                    <h3>Constitution</h3>
-                    <div class="stat-circle">16</div>
+                    <h3>@Html.DisplayNameFor(model => model.Constitution)</h3>
+                    <div class="stat-circle">@Html.DisplayFor(model => model.Constitution)</div>
                     <span class="badge">+2</span>
                 </li>
                 <li>
-                    <h3>Intelligence</h3>
-                    <div class="stat-circle">14</div>
+                    <h3>@Html.DisplayNameFor(model => model.Intelligence)</h3>
+                    <div class="stat-circle">@Html.DisplayFor(model => model.Intelligence)</div>
                     <span class="badge">+2</span>
                 </li>
                 <li>
-                    <h3>Wisdom</h3>
-                    <div class="stat-circle">9</div>
+                    <h3>@Html.DisplayNameFor(model => model.Wisdom)</h3>
+                    <div class="stat-circle">@Html.DisplayFor(model => model.Wisdom)</div>
                     <span class="badge">+2</span>
                 </li>
                 <li>
-                    <h3>Charisma</h3>
-                    <div class="stat-circle">9</div>
+                    <h3>@Html.DisplayNameFor(model => model.Charisma)</h3>
+                    <div class="stat-circle">@Html.DisplayFor(model => model.Charisma)</div>
                     <span class="badge">+2</span>
                 </li>
             </ul>

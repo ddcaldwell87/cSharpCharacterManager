@@ -32,7 +32,13 @@ namespace CharacterManager.Services
                 Ideals = model.Ideals,
                 Bonds = model.Bonds,
                 Flaws = model.Flaws,
-                HitPoints = model.HitPoints
+                HitPoints = model.HitPoints,
+                Strength = model.Strength,
+                Dexterity = model.Dexterity,
+                Constitution = model.Constitution,
+                Intelligence = model.Intelligence,
+                Wisdom = model.Wisdom,
+                Charisma = model.Charisma
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -59,7 +65,13 @@ namespace CharacterManager.Services
                         Ideals = e.Ideals,
                         Bonds = e.Bonds,
                         Flaws = e.Flaws,
-                        HitPoints = e.HitPoints
+                        HitPoints = e.HitPoints,
+                        Strength = e.Strength,
+                        Dexterity = e.Dexterity,
+                        Constitution = e.Constitution,
+                        Intelligence = e.Intelligence,
+                        Wisdom = e.Wisdom,
+                        Charisma = e.Charisma
                     });
                 return query.ToArray();
             }
@@ -82,7 +94,13 @@ namespace CharacterManager.Services
                     Ideals = entity.Ideals,
                     Bonds = entity.Bonds,
                     Flaws = entity.Flaws,
-                    HitPoints = entity.HitPoints
+                    HitPoints = entity.HitPoints,
+                    Strength = entity.Strength,
+                    Dexterity = entity.Dexterity,
+                    Constitution = entity.Constitution,
+                    Intelligence = entity.Intelligence,
+                    Wisdom = entity.Wisdom,
+                    Charisma = entity.Charisma
                 };
             }
         }
@@ -103,6 +121,12 @@ namespace CharacterManager.Services
                 entity.Bonds = model.Bonds;
                 entity.Flaws = model.Flaws;
                 entity.HitPoints = model.HitPoints;
+                entity.Strength = model.Strength;
+                entity.Dexterity = model.Dexterity;
+                entity.Constitution = model.Constitution;
+                entity.Intelligence = model.Intelligence;
+                entity.Wisdom = model.Wisdom;
+                entity.Charisma = model.Charisma;
 
                 return ctx.SaveChanges() == 1;
             }

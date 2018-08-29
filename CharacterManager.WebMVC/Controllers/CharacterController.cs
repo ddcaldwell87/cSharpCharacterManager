@@ -71,7 +71,13 @@ namespace CharacterManager.WebMVC.Controllers
                 Ideals = detail.Ideals,
                 Bonds = detail.Bonds,
                 Flaws = detail.Flaws,
-                HitPoints = detail.HitPoints
+                HitPoints = detail.HitPoints,
+                Strength = detail.Strength,
+                Dexterity = detail.Dexterity,
+                Constitution = detail.Constitution,
+                Intelligence = detail.Intelligence,
+                Wisdom = detail.Wisdom,
+                Charisma = detail.Charisma
             };
 
             return View(model);
