@@ -47,33 +47,49 @@
                     <h3>@Html.DisplayNameFor(model => model.Strength)</h3>
                     <div class="stat-circle">@Html.DisplayFor(model => model.Strength)</div>
                     <span class="badge">
-                        @{ var strMod =  }
+                        @{ var strMod = Model.Strength.Modifier(); }
+                        @Html.DisplayFor(model => strMod)
                     </span>
                 </li>
                 <li>
                     <h3>@Html.DisplayNameFor(model => model.Dexterity)</h3>
                     <div class="stat-circle">@Html.DisplayFor(model => model.Dexterity)</div>
-                    <span class="badge">+4</span>
+                    <span class="badge">
+                        @{ var dexMod = Model.Dexterity.Modifier(); }
+                        @Html.DisplayFor(model => dexMod)
+                    </span>
                 </li>
                 <li>
                     <h3>@Html.DisplayNameFor(model => model.Constitution)</h3>
                     <div class="stat-circle">@Html.DisplayFor(model => model.Constitution)</div>
-                    <span class="badge">+2</span>
+                    <span class="badge">
+                        @{ var conMod = Model.Constitution.Modifier(); }
+                        @Html.DisplayFor(model => conMod)
+                    </span>
                 </li>
                 <li>
                     <h3>@Html.DisplayNameFor(model => model.Intelligence)</h3>
                     <div class="stat-circle">@Html.DisplayFor(model => model.Intelligence)</div>
-                    <span class="badge">+2</span>
+                    <span class="badge">
+                        @{ var intMod = Model.Intelligence.Modifier(); }
+                        @Html.DisplayFor(model => intMod)
+                    </span>
                 </li>
                 <li>
                     <h3>@Html.DisplayNameFor(model => model.Wisdom)</h3>
                     <div class="stat-circle">@Html.DisplayFor(model => model.Wisdom)</div>
-                    <span class="badge">+2</span>
+                    <span class="badge">
+                        @{ var wisMod = Model.Wisdom.Modifier(); }
+                        @Html.DisplayFor(model => wisMod)
+                    </span>
                 </li>
                 <li>
                     <h3>@Html.DisplayNameFor(model => model.Charisma)</h3>
                     <div class="stat-circle">@Html.DisplayFor(model => model.Charisma)</div>
-                    <span class="badge">+2</span>
+                    <span class="badge">
+                        @{ var charMod = Model.Charisma.Modifier(); }
+                        @Html.DisplayFor(model => charMod)
+                    </span>
                 </li>
             </ul>
         </div>

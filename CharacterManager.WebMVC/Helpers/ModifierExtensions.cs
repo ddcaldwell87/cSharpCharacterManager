@@ -4,80 +4,64 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace CharacterManager.WebMVC.Helpers
+public static class ModifierExtensions
 {
-    public static class ModifierExtensions
+    public static string Modifier(this Int32 attribute)
     {
-        public static int Modifier(int attribute)
+        int modifier = 0;
+
+        switch (attribute)
         {
-            int modifier = 0;
-
-            if (attribute == 1)
-            {
+            case 1:
                 modifier = -5;
-            }
-            else if (attribute >= 2 && attribute <= 3)
-            {
+                break;
+            case int a when (a == 2 || a == 3):
                 modifier = -4;
-            }
-            else if (attribute >= 4 && attribute <= 5)
-            {
+                break;
+            case int a when (a == 4 || a == 5):
                 modifier = -3;
-            }
-            else if (attribute >= 6 && attribute <= 7)
-            {
+                break;
+            case int a when (a == 6 || a == 7):
                 modifier = -2;
-            }
-            else if (attribute >= 8 && attribute <= 9)
-            {
+                break;
+            case int a when (a == 8 || a == 9):
                 modifier = -1;
-            }
-            else if (attribute >= 10 && attribute <= 11)
-            {
+                break;
+            case int a when (a == 10 || a == 11):
                 modifier = 0;
-            }
-            else if (attribute >= 12 && attribute <= 13)
-            {
-                modifier = +1;
-            }
-            else if (attribute >= 14 && attribute <= 15)
-            {
-                modifier = +2;
-            }
-            else if (attribute >= 16 && attribute <= 17)
-            {
-                modifier = +3;
-            }
-            else if (attribute >= 18 && attribute <= 19)
-            {
-                modifier = +4;
-            }
-            else if (attribute >= 20 && attribute <= 21)
-            {
-                modifier = +5;
-            }
-            else if (attribute >= 22 && attribute <= 23)
-            {
-                modifier = +6;
-            }
-            else if (attribute >= 24 && attribute <= 25)
-            {
-                modifier = +7;
-            }
-            else if (attribute >= 26 && attribute <= 27)
-            {
-                modifier = +8;
-            }
-            else if (attribute >= 28 && attribute <= 29)
-            {
-                modifier = +9;
-            }
-            else if (attribute == 30)
-            {
-                modifier = +10;
-            }
-
-            return modifier;
+                break;
+            case int a when (a == 12 || a == 13):
+                modifier = 1;
+                break;
+            case int a when (a == 14 || a == 15):
+                modifier = 2;
+                break;
+            case int a when (a == 16 || a == 17):
+                modifier = 3;
+                break;
+            case int a when (a == 18 || a == 19):
+                modifier = 4;
+                break;
+            case int a when (a == 20 || a == 21):
+                modifier = 5;
+                break;
+            case int a when (a == 22 || a == 23):
+                modifier = 6;
+                break;
+            case int a when (a == 24 || a == 25):
+                modifier = 7;
+                break;
+            case int a when (a == 26 || a == 27):
+                modifier = 8;
+                break;
+            case int a when (a == 28 || a == 29):
+                modifier = 9;
+                break;
+            case 30:
+                modifier = 10;
+                break;
         }
+
+        return modifier.ToString();
     }
 }
