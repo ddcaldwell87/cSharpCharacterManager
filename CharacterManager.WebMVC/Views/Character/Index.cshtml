@@ -4,7 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-
+<div class="jumbotron" id="character">
+    <div class="container">
+        <h1>Characters</h1>
+        <div class="links">
+            @Html.ActionLink("New Character", "Create", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>
 
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -17,41 +24,46 @@
     </div>
 }
 
-    <div class="jumbotron" id="character">
-        <div class="container">
-            <h1>Characters</h1>
-            @*<p class="lead"></p>*@
-        </div>
-    </div>
-
-    <p>
-        @Html.ActionLink("New Character", "Create", null, new { @class="btn btn-danger" })
-    </p>
-
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            var race = item.CharacterRace.GetDisplayName();
+<div class="row">
+    @foreach (var item in Model)
+    {
+        var race = item.CharacterRace.GetDisplayName();
+        //var alignment = item.Alignment.GetDisplayName();
         <div class="col-md-6">
-            <div class="character-card">
-                <h2>
-                    @Html.ActionLink(item.CharacterName, "Details", new { id = item.CharacterId })
-                </h2>
-                <h4>
-                    @Html.DisplayFor(modelItem => item.CharacterClass)
-                </h4>
-                <p>
-                    @Html.DisplayFor(modelItem => item.CharacterGender)
-                </p>
-                <p>
-                    @Html.DisplayFor(modelItem => race)
-                </p>
+            <div class="panel panel-danger">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>@Html.ActionLink(item.CharacterName, "Details", new { id = item.CharacterId })</h2>
+                            <h4>@Html.DisplayFor(modelItem => item.CharacterClass)</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>2</h2>
+                            <h4>Level</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            @{ 
+                                string baseUrl = "~/Content/Images/";
+                                string icon = item.CharacterClass.ToString().ClassIconUrl();
+                                string iconUrl = baseUrl + icon;
+                            }
+                            <img src=@Url.Content(iconUrl) alt="Class icon" class="img-rouded" />
+                        </div>
+                        <div class="col-md-6">
+                            <h4>@Html.DisplayFor(modelItem => race)</h4>
+                            <h4>@Html.DisplayFor(modelItem => item.CharacterGender)</h4>
+                            @*<h4>@Html.DisplayFor(modelItem => alignment)</h4>*@
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        }
-    </div>
+    }
+</div>
 @*@Html.ActionLink("Edit", "Edit", new { id = item.CharacterId }) |
-@Html.ActionLink("Details", "Details", new { id = item.CharacterId }) |
-@Html.ActionLink("Delete", "Delete", new { id = item.CharacterId }) |
-@Html.ActionLink("Journal", "Index", "Journal", new { id = item.CharacterId }, null) |
-@Html.ActionLink("Inventory", "Index", "Inventory", new { id = item.CharacterId }, null)*@
+    @Html.ActionLink("Details", "Details", new { id = item.CharacterId }) |
+    @Html.ActionLink("Delete", "Delete", new { id = item.CharacterId }) |
+    @Html.ActionLink("Journal", "Index", "Journal", new { id = item.CharacterId }, null) |
+    @Html.ActionLink("Inventory", "Index", "Inventory", new { id = item.CharacterId }, null)*@
