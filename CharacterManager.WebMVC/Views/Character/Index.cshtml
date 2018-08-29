@@ -30,33 +30,33 @@
         var race = item.CharacterRace.GetDisplayName();
         //var alignment = item.Alignment.GetDisplayName();
         <div class="col-md-6">
-            <div class="panel panel-danger">
+            <div class="panel panel-danger character-card">
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <h2>@Html.ActionLink(item.CharacterName, "Details", new { id = item.CharacterId })</h2>
-                            <h4>@Html.DisplayFor(modelItem => item.CharacterClass)</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <h2>2</h2>
-                            <h4>Level</h4>
                         </div>
                     </div>
+
                     <div class="row">
-                        <div class="col-md-6">
-                            @{ 
+                        <div class="col-md-9 col-xs-8">
+                            <h4>@Html.DisplayFor(modelItem => item.CharacterClass)</h4>
+                            @{
                                 string baseUrl = "~/Content/Images/";
-                                string icon = item.CharacterClass.ToString().ClassIconUrl();
-                                string iconUrl = baseUrl + icon;
+                                string classImageName = item.CharacterClass.ToString().ClassIconUrl();
+                                string classIcon = baseUrl + classImageName;
                             }
-                            <img src=@Url.Content(iconUrl) alt="Class icon" class="img-rouded" />
+                            <img src=@Url.Content(classIcon) alt="Class icon" class="img-responsive class-icon" />
                         </div>
-                        <div class="col-md-6">
-                            <h4>@Html.DisplayFor(modelItem => race)</h4>
+                        <div class="col-md-3 col-xs-4">
+                            <h2>2</h2>
+                            <h4>Level</h4>
                             <h4>@Html.DisplayFor(modelItem => item.CharacterGender)</h4>
+                            <h4>@Html.DisplayFor(modelItem => race)</h4>
                             @*<h4>@Html.DisplayFor(modelItem => alignment)</h4>*@
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
