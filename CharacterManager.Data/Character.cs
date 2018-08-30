@@ -10,7 +10,39 @@ namespace CharacterManager.Data
 {
     public enum Race
     {
-        Aarakocra = 1, Aasimar, Bugbear, Centaur, Changeling, Dragonborn, Dwarf, Elf, [Display(Name = "Feral Tiefling")] Feral_Tiefling, Firbolg, Genasi, Gith, Gnome, Goblin, Goliath, [Display(Name = "Half Elf")] HalfElf, Halfling, [Display(Name = "Half Orc")] HalfOrc, Hobgoblin, Human, Kalashtar, Kenku, Kobold, Lizardfolk, Minotaur, Orc, Shifter, Tabaxi, Tiefling, Tortle, Triton, Warforged, [Display(Name = "Yuan-ti Pureblood")] YuanTi_Pureblood
+        [Display(Name = "Aarakocra")] Aarakocra = 1,
+        [Display(Name = "Aasimar")] Aasimar,
+        [Display(Name = "Bugbear")] Bugbear,
+        [Display(Name = "Centaur")] Centaur,
+        [Display(Name = "Changeling")] Changeling,
+        [Display(Name = "Dragonborn")] Dragonborn,
+        [Display(Name = "Dwarf")] Dwarf,
+        [Display(Name = "Elf")] Elf,
+        [Display(Name = "Feral Tiefling")] Feral_Tiefling,
+        [Display(Name = "Firbolg")] Firbolg,
+        [Display(Name = "Genasi")] Genasi,
+        [Display(Name = "Gith")] Gith,
+        [Display(Name = "Gnome")] Gnome,
+        [Display(Name = "Goblin")] Goblin,
+        [Display(Name = "Goliath")] Goliath,
+        [Display(Name = "Half Elf")] HalfElf,
+        [Display(Name = "Halfling")] Halfling,
+        [Display(Name = "Half Orc")] HalfOrc,
+        [Display(Name = "Hobgoblin")] Hobgoblin,
+        [Display(Name = "Human")] Human,
+        [Display(Name = "Kalashtar")] Kalashtar,
+        [Display(Name = "Kenku")] Kenku,
+        [Display(Name = "Kobold")] Kobold,
+        [Display(Name = "Lizardfolk")] Lizardfolk,
+        [Display(Name = "Minotaur")] Minotaur,
+        [Display(Name = "Orc")] Orc,
+        [Display(Name = "Shifter")] Shifter,
+        [Display(Name = "Tabaxi")] Tabaxi,
+        [Display(Name = "Tiefling")] Tiefling,
+        [Display(Name = "Tortle")] Tortle,
+        [Display(Name = "Triton")] Triton,
+        [Display(Name = "Warforged")] Warforged,
+        [Display(Name = "Yuan-ti Pureblood")] YuanTi_Pureblood
     }
 
     public enum Gender
@@ -22,12 +54,31 @@ namespace CharacterManager.Data
 
     public enum Class
     {
-        Barbarian = 1, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard
+        Barbarian = 1,
+        Bard,
+        Cleric,
+        Druid,
+        Fighter,
+        Monk,
+        Paladin,
+        Ranger,
+        Rogue,
+        Sorcerer,
+        Warlock,
+        Wizard
     }
 
     public enum Alignment
     {
-        [Display(Name = "Lawful Good")] LawfulGood = 1, [Display(Name = "Lawful Neutral")] LawfulNeutral, [Display(Name = "Lawful Evil")] LawfulEvil, [Display(Name = "Neutral Good")] NeutralGood, [Display(Name = "True Neutral")] TrueNeutral, [Display(Name = "Neutral Evil")] NeutralEvil, [Display(Name = "Chaotic Good")] ChaoticGood, [Display(Name = "Chaotic Neutral")] ChaoticNeutral, [Display(Name = "Chaotic Evil")] ChaoticEvil
+        [Display(Name = "Lawful Good")] LawfulGood = 1,
+        [Display(Name = "Lawful Neutral")] LawfulNeutral,
+        [Display(Name = "Lawful Evil")] LawfulEvil,
+        [Display(Name = "Neutral Good")] NeutralGood,
+        [Display(Name = "True Neutral")] TrueNeutral,
+        [Display(Name = "Neutral Evil")] NeutralEvil,
+        [Display(Name = "Chaotic Good")] ChaoticGood,
+        [Display(Name = "Chaotic Neutral")] ChaoticNeutral,
+        [Display(Name = "Chaotic Evil")] ChaoticEvil
     }
 
     public class Character
@@ -61,5 +112,11 @@ namespace CharacterManager.Data
         public string Bonds { get; set; }
         public string Flaws { get; set; }
 
+        public int Strength { get; set; }
+        public int Dexterity { get; set; }
+        public int Constitution { get; set; }
+        public int Intelligence { get; set; }
+        public int Wisdom { get; set; }
+        public int Charisma { get; set; }
     }
 }

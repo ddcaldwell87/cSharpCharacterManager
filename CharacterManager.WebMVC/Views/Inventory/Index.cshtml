@@ -2,13 +2,14 @@
 
 @{
     ViewBag.Title = "Index";
+    var name = ViewBag.CharacterName;
 }
 
-<p>
-    @Html.ActionLink("Create New", "Create", new { id = Request.Url.Segments.Last() }) |
-    @Html.ActionLink("Go Back", "Details", "Character", new { id = Request.Url.Segments.Last() }, null) |
-    @Html.ActionLink("Back to Characters", "Index", "Character")
-</p>
+<ol class="breadcrumb">
+    <li>@Html.ActionLink("Characters", "Index", "Character")</li>
+    <li>@Html.ActionLink((string) name, "Details", "Character", new { id = Request.Url.Segments.Last() }, null)</li>
+    <li class="active">Inventory</li>
+</ol>
 
 @if (TempData.ContainsKey("SaveResult"))
 {
@@ -56,3 +57,9 @@
     }
 
 </table>
+
+<ol class="breadcrumb">
+    <li>@Html.ActionLink("Characters", "Index", "Character")</li>
+    <li>@Html.ActionLink((string)name, "Details", "Character", new { id = Request.Url.Segments.Last() }, null)</li>
+    <li class="active">Inventory</li>
+</ol>
