@@ -17,6 +17,10 @@
         <div class="panel panel-danger char-info">
             <ul class="list-group panel-body">
                 <li class="list-group-item">
+                    <span class="badge">@Html.DisplayNameFor(model => model.Level)</span>
+                    @Html.DisplayFor(model => model.Level)
+                </li>
+                <li class="list-group-item">
                     <span class="badge">@Html.DisplayNameFor(model => model.CharacterRace)</span>
                     @{ var race = Model.CharacterRace.GetDisplayName(); }
                     @Html.DisplayFor(model => race)
@@ -127,7 +131,7 @@
                                 @Html.DisplayNameFor(model => model.Speed)
                             </div>
                             <div class="panel-body hit-stats">
-                                @Html.DisplayFor(model => model.Speed)
+                                @Html.DisplayFor(model => model.Speed) feet
                             </div>
                         </div>
                     </div>

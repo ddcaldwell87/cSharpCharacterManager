@@ -90,6 +90,9 @@ namespace CharacterManager.Data
         public Guid OwnerId { get; set; }
 
         [Required]
+        public int Level { get; set; }
+
+        [Required]
         public string CharacterName { get; set; }
 
         [Required]

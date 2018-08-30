@@ -12,6 +12,9 @@ namespace CharacterManager.Models.CharacterModels
     {
         public int CharacterId { get; set; }
 
+        [Required]
+        public int Level { get; set; }
+
         [Display(Name = "Name")]
         public string CharacterName { get; set; }
 
@@ -65,6 +68,7 @@ namespace CharacterManager.Models.CharacterModels
         public int SavingCha { get; set; }
 
         public int Acrobatics { get; set; }
+        [Display(Name = "Animal Handling")]
         public int AnimalHandling { get; set; }
         public int Arcana { get; set; }
         public int Athletics { get; set; }
@@ -79,6 +83,7 @@ namespace CharacterManager.Models.CharacterModels
         public int Performance { get; set; }
         public int Persuasion { get; set; }
         public int Regligion { get; set; }
+        [Display(Name = "Sleight Of Hand")]
         public int SleightOfHand { get; set; }
         public int Stealth { get; set; }
         public int Survival { get; set; }

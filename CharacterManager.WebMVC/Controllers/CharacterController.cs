@@ -62,6 +62,7 @@ namespace CharacterManager.WebMVC.Controllers
             var model = new CharacterEdit
             {
                 CharacterId = detail.CharacterId,
+                Level = detail.Level,
                 CharacterName = detail.CharacterName,
                 CharacterRace = detail.CharacterRace,
                 CharacterGender = detail.CharacterGender,

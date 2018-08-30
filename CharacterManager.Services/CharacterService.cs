@@ -23,6 +23,7 @@ namespace CharacterManager.Services
             var entity = new Character()
             {
                 OwnerId = _ownerId,
+                Level = model.Level,
                 CharacterName = model.CharacterName,
                 CharacterRace = model.CharacterRace,
                 CharacterGender = model.CharacterGender,
@@ -84,6 +85,7 @@ namespace CharacterManager.Services
                     .Select(e => new CharacterListItem
                     {
                         CharacterId = e.CharacterId,
+                        Level = e.Level,
                         CharacterName = e.CharacterName,
                         CharacterRace = e.CharacterRace,
                         CharacterGender = e.CharacterGender,
@@ -141,6 +143,7 @@ namespace CharacterManager.Services
                 return new CharacterDetail
                 {
                     CharacterId = entity.CharacterId,
+                    Level = entity.Level,
                     CharacterName = entity.CharacterName,
                     CharacterRace = entity.CharacterRace,
                     CharacterGender = entity.CharacterGender,
@@ -195,6 +198,7 @@ namespace CharacterManager.Services
             {
                 var entity = ctx.Characters.Single(e => e.CharacterId == model.CharacterId && e.OwnerId == _ownerId);
 
+                entity.Level = model.Level;
                 entity.CharacterName = model.CharacterName;
                 entity.CharacterRace = model.CharacterRace;
                 entity.CharacterGender = model.CharacterGender;
