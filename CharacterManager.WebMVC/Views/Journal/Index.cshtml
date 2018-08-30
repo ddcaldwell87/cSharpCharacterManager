@@ -43,7 +43,8 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Content)
+                @{ var truncated = item.Content.Truncate(); }
+                @Html.DisplayFor(modelItem => truncated)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CreatedUtc)

@@ -104,30 +104,30 @@
                     <div class="col-md-4 col-sm-4">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
-                                Armor Class
+                                @Html.DisplayNameFor(model => model.ArmorClass)
                             </div>
                             <div class="panel-body hit-stats">
-                                5
+                                @Html.DisplayFor(model => model.ArmorClass)
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
-                                Initiative
+                                @Html.DisplayNameFor(model => model.Initiative)
                             </div>
                             <div class="panel-body hit-stats">
-                                12
+                                @Html.DisplayFor(model => model.Initiative)
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
-                                Speed
+                                @Html.DisplayNameFor(model => model.Speed)
                             </div>
                             <div class="panel-body hit-stats">
-                                5
+                                @Html.DisplayFor(model => model.Speed)
                             </div>
                         </div>
                     </div>
@@ -148,10 +148,10 @@
                     <div class="col-md-6 col-sm-6">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
-                                Hit Die
+                                @Html.DisplayNameFor(model => model.HitDie)
                             </div>
                             <div class="panel-body hit-stats">
-                                1d8
+                                @Html.DisplayFor(model => model.HitDie)
                             </div>
                         </div>
                     </div>
@@ -219,28 +219,28 @@
                 </div>
                 <ul class="list-group panel-body saving-throws">
                     <li class="list-group-item">
-                        <span class="badge">+3</span>
-                        Strength
+                        <span class="badge">@Html.DisplayFor(model => model.SavingStr)</span>
+                        @Html.DisplayNameFor(model => model.SavingStr)
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">+3</span>
-                        Dexterity
+                        <span class="badge">@Html.DisplayFor(model => model.SavingDex)</span>
+                        @Html.DisplayNameFor(model => model.SavingDex)
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">+3</span>
-                        Constitution
+                        <span class="badge">@Html.DisplayFor(model => model.SavingCon)</span>
+                        @Html.DisplayNameFor(model => model.SavingCon)
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">+3</span>
-                        Intelligence
+                        <span class="badge">@Html.DisplayFor(model => model.SavingInt)</span>
+                        @Html.DisplayNameFor(model => model.SavingInt)
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">+3</span>
-                        Wisdom
+                        <span class="badge">@Html.DisplayFor(model => model.SavingWis)</span>
+                        @Html.DisplayNameFor(model => model.SavingWis)
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">+3</span>
-                        Charisma
+                        <span class="badge">@Html.DisplayFor(model => model.SavingCha)</span>
+                        @Html.DisplayNameFor(model => model.SavingCha)
                     </li>
                 </ul>
             </div>
@@ -253,76 +253,76 @@
                     </div>
                     <ul class="list-group panel-body skills">
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Acrobatics <small>(Dex)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Acrobatics)</span>
+                            @Html.DisplayNameFor(model => model.Acrobatics) <small>(Dex)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Animal Handling <small>(Wis)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.AnimalHandling)</span>
+                            @Html.DisplayNameFor(model => model.AnimalHandling) <small>(Wis)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Arcana <small>(Int)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Arcana)</span>
+                            @Html.DisplayNameFor(model => model.Arcana) <small>(Int)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Athletics <small>(Str)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Athletics)</span>
+                            @Html.DisplayNameFor(model => model.Athletics) <small>(Str)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Deception <small>(Cha)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Deception)</span>
+                            @Html.DisplayNameFor(model => model.Deception) <small>(Cha)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            History <small>(Int)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.History)</span>
+                            @Html.DisplayNameFor(model => model.History) <small>(Int)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Insight <small>(Wis)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Insight)</span>
+                            @Html.DisplayNameFor(model => model.Insight) <small>(Wis)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Intimidation <small>(Cha)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Intimidation)</span>
+                            @Html.DisplayNameFor(model => model.Intimidation) <small>(Cha)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Investigation <small>(Int)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Investigation)</span>
+                            @Html.DisplayNameFor(model => model.Investigation) <small>(Int)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Medicine <small>(Wis)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Medicine)</span>
+                            @Html.DisplayNameFor(model => model.Medicine) <small>(Wis)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Nature <small>(Int)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Nature)</span>
+                            @Html.DisplayNameFor(model => model.Nature) <small>(Int)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Perception <small>(Wis)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Perception)</span>
+                            @Html.DisplayNameFor(model => model.Perception) <small>(Wis)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Performance <small>(Cha)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Performance)</span>
+                            @Html.DisplayNameFor(model => model.Performance) <small>(Cha)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Persuasion <small>(Cha)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Persuasion)</span>
+                            @Html.DisplayNameFor(model => model.Persuasion) <small>(Cha)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Religion <small>(Int)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Regligion)</span>
+                            @Html.DisplayNameFor(model => model.Regligion) <small>(Int)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Sleight Of Hand <small>(Dex)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.SleightOfHand)</span>
+                            @Html.DisplayNameFor(model => model.SleightOfHand) <small>(Dex)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Stealth <small>(Dex)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Stealth)</span>
+                            @Html.DisplayNameFor(model => model.Stealth) <small>(Dex)</small>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge">+1</span>
-                            Survival <small>(Wis)</small>
+                            <span class="badge">@Html.DisplayFor(model => model.Survival)</span>
+                            @Html.DisplayNameFor(model => model.Survival) <small>(Wis)</small>
                         </li>
                     </ul>
                 </div>

@@ -208,6 +208,7 @@
     <Compile Include="Helpers\EnumExtensions.cs" />
     <Compile Include="Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="Helpers\ModifierExtensions.cs" />
+    <Compile Include="Helpers\StringHelperExtensions.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -220,6 +221,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\Barbarian.jpg" />
     <Content Include="Content\Images\Bard.jpg" />
+    <Content Include="Content\Images\charSheet.PNG" />
     <Content Include="Content\Images\Cleric.jpg" />
     <Content Include="Content\Images\DFS_poster1.jpg" />
     <Content Include="Content\Images\DnD_DMG_Art.jpg" />
@@ -228,6 +230,8 @@
     <Content Include="Content\Images\DnD_Starter_Art.jpg" />
     <Content Include="Content\Images\Druid.jpg" />
     <Content Include="Content\Images\Fighter.jpg" />
+    <Content Include="Content\Images\inventory.PNG" />
+    <Content Include="Content\Images\journal.PNG" />
     <Content Include="Content\Images\Monk.jpg" />
     <Content Include="Content\Images\Paladin.jpg" />
     <Content Include="Content\Images\paper-1074136_1920.jpg" />

@@ -38,7 +38,35 @@ namespace CharacterManager.Services
                 Constitution = model.Constitution,
                 Intelligence = model.Intelligence,
                 Wisdom = model.Wisdom,
-                Charisma = model.Charisma
+                Charisma = model.Charisma,
+                Acrobatics = model.Acrobatics,
+                AnimalHandling = model.AnimalHandling,
+                Arcana = model.Arcana,
+                Athletics = model.Athletics,
+                Deception = model.Deception,
+                History = model.History,
+                Insight = model.Insight,
+                Intimidation = model.Intimidation,
+                Investigation = model.Investigation,
+                Medicine = model.Medicine,
+                Nature = model.Nature,
+                Perception = model.Perception,
+                Performance = model.Performance,
+                Persuasion = model.Persuasion,
+                Regligion = model.Regligion,
+                SleightOfHand = model.SleightOfHand,
+                Stealth = model.Stealth,
+                Survival = model.Survival,
+                HitDie = model.HitDie,
+                ArmorClass = model.ArmorClass,
+                Speed = model.Speed,
+                Initiative = model.Initiative,
+                SavingStr = model.SavingStr,
+                SavingDex = model.SavingDex,
+                SavingCon = model.SavingCon,
+                SavingInt = model.SavingInt,
+                SavingWis = model.SavingWis,
+                SavingCha = model.SavingCha
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -71,7 +99,35 @@ namespace CharacterManager.Services
                         Constitution = e.Constitution,
                         Intelligence = e.Intelligence,
                         Wisdom = e.Wisdom,
-                        Charisma = e.Charisma
+                        Charisma = e.Charisma,
+                        Acrobatics = e.Acrobatics,
+                        AnimalHandling = e.AnimalHandling,
+                        Arcana = e.Arcana,
+                        Athletics = e.Athletics,
+                        Deception = e.Deception,
+                        History = e.History,
+                        Insight = e.Insight,
+                        Intimidation = e.Intimidation,
+                        Investigation = e.Investigation,
+                        Medicine = e.Medicine,
+                        Nature = e.Nature,
+                        Perception = e.Perception,
+                        Performance = e.Performance,
+                        Persuasion = e.Persuasion,
+                        Regligion = e.Regligion,
+                        SleightOfHand = e.SleightOfHand,
+                        Stealth = e.Stealth,
+                        Survival = e.Survival,
+                        HitDie = e.HitDie,
+                        ArmorClass = e.ArmorClass,
+                        Speed = e.Speed,
+                        Initiative = e.Initiative,
+                        SavingStr = e.SavingStr,
+                        SavingDex = e.SavingDex,
+                        SavingCon = e.SavingCon,
+                        SavingInt = e.SavingInt,
+                        SavingWis = e.SavingWis,
+                        SavingCha = e.SavingCha
                     });
                 return query.ToArray();
             }
@@ -100,7 +156,35 @@ namespace CharacterManager.Services
                     Constitution = entity.Constitution,
                     Intelligence = entity.Intelligence,
                     Wisdom = entity.Wisdom,
-                    Charisma = entity.Charisma
+                    Charisma = entity.Charisma,
+                    Acrobatics = entity.Acrobatics,
+                    AnimalHandling = entity.AnimalHandling,
+                    Arcana = entity.Arcana,
+                    Athletics = entity.Athletics,
+                    Deception = entity.Deception,
+                    History = entity.History,
+                    Insight = entity.Insight,
+                    Intimidation = entity.Intimidation,
+                    Investigation = entity.Investigation,
+                    Medicine = entity.Medicine,
+                    Nature = entity.Nature,
+                    Perception = entity.Perception,
+                    Performance = entity.Performance,
+                    Persuasion = entity.Persuasion,
+                    Regligion = entity.Regligion,
+                    SleightOfHand = entity.SleightOfHand,
+                    Stealth = entity.Stealth,
+                    Survival = entity.Survival,
+                    HitDie = entity.HitDie,
+                    ArmorClass = entity.ArmorClass,
+                    Speed = entity.Speed,
+                    Initiative = entity.Initiative,
+                    SavingStr = entity.SavingStr,
+                    SavingDex = entity.SavingDex,
+                    SavingCon = entity.SavingCon,
+                    SavingInt = entity.SavingInt,
+                    SavingWis = entity.SavingWis,
+                    SavingCha = entity.SavingCha
                 };
             }
         }
@@ -127,6 +211,34 @@ namespace CharacterManager.Services
                 entity.Intelligence = model.Intelligence;
                 entity.Wisdom = model.Wisdom;
                 entity.Charisma = model.Charisma;
+                entity.Acrobatics = model.Acrobatics;
+                entity.AnimalHandling = model.AnimalHandling;
+                entity.Arcana = model.Arcana;
+                entity.Athletics = model.Athletics;
+                entity.Deception = model.Deception;
+                entity.History = model.History;
+                entity.Insight = model.Insight;
+                entity.Intimidation = model.Intimidation;
+                entity.Investigation = model.Investigation;
+                entity.Medicine = model.Medicine;
+                entity.Nature = model.Nature;
+                entity.Perception = model.Perception;
+                entity.Performance = model.Performance;
+                entity.Persuasion = model.Persuasion;
+                entity.Regligion = model.Regligion;
+                entity.SleightOfHand = model.SleightOfHand;
+                entity.Stealth = model.Stealth;
+                entity.Survival = model.Survival;
+                entity.HitDie = model.HitDie;
+                entity.ArmorClass = model.ArmorClass;
+                entity.Speed = model.Speed;
+                entity.Initiative = model.Initiative;
+                entity.SavingStr = model.SavingStr;
+                entity.SavingDex = model.SavingDex;
+                entity.SavingCon = model.SavingCon;
+                entity.SavingInt = model.SavingInt;
+                entity.SavingWis = model.SavingWis;
+                entity.SavingCha = model.SavingCha;
 
                 return ctx.SaveChanges() == 1;
             }
