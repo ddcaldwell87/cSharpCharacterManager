@@ -40,7 +40,7 @@
 </section>
 
 <section class="row">
-    <aside class="col-md-3">
+    <aside class="col-md-3 col-sm-4">
         <div class="panel panel-danger">
             <ul class="panel-body text-center">
                 <li>
@@ -95,41 +95,158 @@
         </div>
     </aside>
 
-    <div class="col-md-4">
+
+
+    <div class="col-md-6 col-sm-8">
         <div class="panel panel-danger">
-            <div class="panel-heading">
-                Saving Throws
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Armor Class
+                            </div>
+                            <div class="panel-body hit-stats">
+                                5
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Initiative
+                            </div>
+                            <div class="panel-body hit-stats">
+                                12
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Speed
+                            </div>
+                            <div class="panel-body hit-stats">
+                                5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                @Html.DisplayNameFor(model => model.HitPoints)
+                            </div>
+                            <div class="panel-body hit-stats">
+                                @Html.DisplayFor(model => model.HitPoints)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Hit Die
+                            </div>
+                            <div class="panel-body hit-stats">
+                                1d8
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul class="list-group panel-body saving-throws">
-                <li class="list-group-item">
-                    <span class="badge">+3</span>
-                    Strength
-                </li>
-                <li class="list-group-item">
-                    <span class="badge">+3</span>
-                    Dexterity
-                </li>
-                <li class="list-group-item">
-                    <span class="badge">+3</span>
-                    Constitution
-                </li>
-                <li class="list-group-item">
-                    <span class="badge">+3</span>
-                    Intelligence
-                </li>
-                <li class="list-group-item">
-                    <span class="badge">+3</span>
-                    Wisdom
-                </li>
-                <li class="list-group-item">
-                    <span class="badge">+3</span>
-                    Charisma
-                </li>
-            </ul>
         </div>
 
         <div class="row">
             <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.PersonalityTraits)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.PersonalityTraits)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.Ideals)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.Ideals)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.Bonds)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.Bonds)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        @Html.DisplayNameFor(model => model.Flaws)
+                    </div>
+                    <div class="panel-body">
+                        @Html.DisplayFor(model => model.Flaws)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="col-md-3 col-sm-8">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    Saving Throws
+                </div>
+                <ul class="list-group panel-body saving-throws">
+                    <li class="list-group-item">
+                        <span class="badge">+3</span>
+                        Strength
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">+3</span>
+                        Dexterity
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">+3</span>
+                        Constitution
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">+3</span>
+                        Intelligence
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">+3</span>
+                        Wisdom
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">+3</span>
+                        Charisma
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="col-md-3 col-sm-8  col-xs-12 pull-right">
                 <div class="panel panel-danger">
                     <div class="panel-heading">
                         Skills
@@ -210,113 +327,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="col-md-5">
-        <div class="panel panel-danger">
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="panel panel-danger">
-                            <div class="panel-heading">
-                                Armor Class
-                            </div>
-                            <div class="panel-body hit-stats">
-                                5
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-danger">
-                            <div class="panel-heading">
-                                Initiative
-                            </div>
-                            <div class="panel-body hit-stats">
-                                12
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-danger">
-                            <div class="panel-heading">
-                                Speed
-                            </div>
-                            <div class="panel-body hit-stats">
-                                5
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-danger">
-                            <div class="panel-heading">
-                                @Html.DisplayNameFor(model => model.HitPoints)
-                            </div>
-                            <div class="panel-body hit-stats">
-                                @Html.DisplayFor(model => model.HitPoints)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        @Html.DisplayNameFor(model => model.PersonalityTraits)
-                    </div>
-                    <div class="panel-body">
-                        @Html.DisplayFor(model => model.PersonalityTraits)
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        @Html.DisplayNameFor(model => model.Ideals)
-                    </div>
-                    <div class="panel-body">
-                        @Html.DisplayFor(model => model.Ideals)
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        @Html.DisplayNameFor(model => model.Bonds)
-                    </div>
-                    <div class="panel-body">
-                        @Html.DisplayFor(model => model.Bonds)
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        @Html.DisplayNameFor(model => model.Flaws)
-                    </div>
-                    <div class="panel-body">
-                        @Html.DisplayFor(model => model.Flaws)
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 </section>
 
 <ol class="breadcrumb">
