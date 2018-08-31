@@ -93,6 +93,10 @@
     <Compile Include="Migrations\201808301821041_addedLevelProperty.Designer.cs">
       <DependentUpon>201808301821041_addedLevelProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808312016183_fixedTypo.cs" />
+    <Compile Include="Migrations\201808312016183_fixedTypo.Designer.cs">
+      <DependentUpon>201808312016183_fixedTypo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -127,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808301821041_addedLevelProperty.resx">
       <DependentUpon>201808301821041_addedLevelProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808312016183_fixedTypo.resx">
+      <DependentUpon>201808312016183_fixedTypo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

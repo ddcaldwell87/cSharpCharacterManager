@@ -59,6 +59,8 @@ namespace CharacterManager.WebMVC.Controllers
             var service = CreateCharacterService();
             var detail = service.GetCharacterById(id);
 
+            ViewBag.CharacterName = detail.CharacterName;
+
             var model = new CharacterEdit
             {
                 CharacterId = detail.CharacterId,
@@ -93,7 +95,7 @@ namespace CharacterManager.WebMVC.Controllers
                 Perception = detail.Perception,
                 Performance = detail.Performance,
                 Persuasion = detail.Persuasion,
-                Regligion = detail.Regligion,
+                Religion = detail.Religion,
                 SleightOfHand = detail.SleightOfHand,
                 Stealth = detail.Stealth,
                 Survival = detail.Survival,

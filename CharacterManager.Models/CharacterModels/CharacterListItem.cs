@@ -82,7 +82,7 @@ namespace CharacterManager.Models.CharacterModels
         public int Perception { get; set; }
         public int Performance { get; set; }
         public int Persuasion { get; set; }
-        public int Regligion { get; set; }
+        public int Religion { get; set; }
         [Display(Name = "Sleight Of Hand")]
         public int SleightOfHand { get; set; }
         public int Stealth { get; set; }

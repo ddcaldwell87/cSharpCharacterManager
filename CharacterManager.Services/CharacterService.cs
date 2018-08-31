@@ -54,7 +54,7 @@ namespace CharacterManager.Services
                 Perception = model.Perception,
                 Performance = model.Performance,
                 Persuasion = model.Persuasion,
-                Regligion = model.Regligion,
+                Religion = model.Religion,
                 SleightOfHand = model.SleightOfHand,
                 Stealth = model.Stealth,
                 Survival = model.Survival,
@@ -116,7 +116,7 @@ namespace CharacterManager.Services
                         Perception = e.Perception,
                         Performance = e.Performance,
                         Persuasion = e.Persuasion,
-                        Regligion = e.Regligion,
+                        Religion = e.Religion,
                         SleightOfHand = e.SleightOfHand,
                         Stealth = e.Stealth,
                         Survival = e.Survival,
@@ -174,7 +174,7 @@ namespace CharacterManager.Services
                     Perception = entity.Perception,
                     Performance = entity.Performance,
                     Persuasion = entity.Persuasion,
-                    Regligion = entity.Regligion,
+                    Religion = entity.Religion,
                     SleightOfHand = entity.SleightOfHand,
                     Stealth = entity.Stealth,
                     Survival = entity.Survival,
@@ -229,7 +229,7 @@ namespace CharacterManager.Services
                 entity.Perception = model.Perception;
                 entity.Performance = model.Performance;
                 entity.Persuasion = model.Persuasion;
-                entity.Regligion = model.Regligion;
+                entity.Religion = model.Religion;
                 entity.SleightOfHand = model.SleightOfHand;
                 entity.Stealth = model.Stealth;
                 entity.Survival = model.Survival;

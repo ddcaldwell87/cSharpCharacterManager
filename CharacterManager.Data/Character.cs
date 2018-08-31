@@ -159,7 +159,7 @@ namespace CharacterManager.Data
         public int Perception { get; set; }
         public int Performance { get; set; }
         public int Persuasion { get; set; }
-        public int Regligion { get; set; }
+        public int Religion { get; set; }
         public int SleightOfHand { get; set; }
         public int Stealth { get; set; }
         public int Survival { get; set; }

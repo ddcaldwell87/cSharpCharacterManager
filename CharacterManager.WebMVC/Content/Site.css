@@ -125,3 +125,16 @@ textarea {
 .character-card a {
     color: #B26E63;
 }
+
+legend {
+    padding-left: 15px;
+    padding-top: 3%;
+}
+
+.loginForm {
+    margin: 5% auto;
+}
+
+.about {
+    margin: 5% auto;
+}

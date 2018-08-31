@@ -20,7 +20,7 @@ namespace CharacterManager.Data.Migrations
             AddColumn("dbo.Character", "Perception", c => c.Int(nullable: false));
             AddColumn("dbo.Character", "Performance", c => c.Int(nullable: false));
             AddColumn("dbo.Character", "Persuasion", c => c.Int(nullable: false));
-            AddColumn("dbo.Character", "Regligion", c => c.Int(nullable: false));
+            AddColumn("dbo.Character", "Religion", c => c.Int(nullable: false));
             AddColumn("dbo.Character", "SleightOfHand", c => c.Int(nullable: false));
             AddColumn("dbo.Character", "Stealth", c => c.Int(nullable: false));
             AddColumn("dbo.Character", "Survival", c => c.Int(nullable: false));
@@ -31,7 +31,7 @@ namespace CharacterManager.Data.Migrations
             DropColumn("dbo.Character", "Survival");
             DropColumn("dbo.Character", "Stealth");
             DropColumn("dbo.Character", "SleightOfHand");
-            DropColumn("dbo.Character", "Regligion");
+            DropColumn("dbo.Character", "Religion");
             DropColumn("dbo.Character", "Persuasion");
             DropColumn("dbo.Character", "Performance");
             DropColumn("dbo.Character", "Perception");
