@@ -7,13 +7,13 @@ namespace CharacterManager.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class fixedTypo : IMigrationMetadata
+    public sealed partial class addedNullableInts : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(fixedTypo));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedNullableInts));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808312016183_fixedTypo"; }
+            get { return "201809042307012_addedNullableInts"; }
         }
         
         string IMigrationMetadata.Source
