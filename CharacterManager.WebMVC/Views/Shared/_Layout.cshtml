@@ -42,8 +42,14 @@
                     @if (!User.Identity.IsAuthenticated)
                     {
                         <div>
-                            @Html.ActionLink("Log In", "Login", "Account", null, new { @class = "btn btn-default" })
-                            @Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-danger" })
+                            @Html.ActionLink("Log In", "Login", "Account", null, new { @class = "btn btn-default btn-lg" })
+                            @Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-danger btn-lg" })
+                        </div>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div>
+                            @Html.ActionLink("Characters", "Index", "Character", null, new { @class="btn btn-default btn-lg" })
                         </div>
                     }
                 </div>
@@ -55,8 +61,8 @@
                 <div class="container">
                     <h1>@ViewBag.CharacterName</h1>
                     <div class="links">
-                        @Html.ActionLink("Journal", "Index", "Journal", new { id = Model.CharacterId }, new { @class = "btn btn-default" })
-                        @Html.ActionLink("Inventory", "Index", "Inventory", new { id = Model.CharacterId }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("Journal", "Index", "Journal", new { id = Model.CharacterId }, new { @class = "btn btn-default btn-lg" })
+                        @Html.ActionLink("Inventory", "Index", "Inventory", new { id = Model.CharacterId }, new { @class = "btn btn-default btn-lg" })
                     </div>
                 </div>
             </div>
@@ -67,7 +73,7 @@
                 <div class="container">
                     <h1>@ViewBag.CharacterName's Journal Entries</h1>
                     <div class="links">
-                        @Html.ActionLink("New Entry", "Create", new { id = Request.Url.Segments.Last() }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("New Entry", "Create", new { id = Request.Url.Segments.Last() }, new { @class = "btn btn-default btn-lg" })
                     </div>
                 </div>
             </div>
@@ -78,7 +84,7 @@
                 <div class="container">
                     <h1>@ViewBag.CharacterName's Inventory Items</h1>
                     <div class="links">
-                        @Html.ActionLink("New Item", "Create", new { id = Request.Url.Segments.Last() }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("New Item", "Create", new { id = Request.Url.Segments.Last() }, new { @class = "btn btn-default btn-lg" })
                     </div>
                 </div>
             </div>

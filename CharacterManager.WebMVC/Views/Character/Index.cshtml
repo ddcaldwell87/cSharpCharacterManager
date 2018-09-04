@@ -28,7 +28,6 @@
     @foreach (var item in Model)
     {
         var race = item.CharacterRace.GetDisplayName();
-        //var alignment = item.Alignment.GetDisplayName();
         <div class="col-md-6">
             <div class="panel panel-danger character-card">
                 <div class="panel-body">
@@ -49,11 +48,12 @@
                             <img src=@Url.Content(classIcon) alt="Class icon" class="img-responsive class-icon" />
                         </div>
                         <div class="col-md-3 col-xs-4">
-                            <h2>2</h2>
+                            <h2>@Html.DisplayFor(modelItem => item.Level)</h2>
                             <h4>Level</h4>
                             <h4>@Html.DisplayFor(modelItem => item.CharacterGender)</h4>
                             <h4>@Html.DisplayFor(modelItem => race)</h4>
-                            @*<h4>@Html.DisplayFor(modelItem => alignment)</h4>*@
+                            @Html.ActionLink("Edit", "Edit", new { id = item.CharacterId }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.CharacterId })
                         </div>
                     </div>
 
@@ -62,8 +62,3 @@
         </div>
     }
 </div>
-@*@Html.ActionLink("Edit", "Edit", new { id = item.CharacterId }) |
-    @Html.ActionLink("Details", "Details", new { id = item.CharacterId }) |
-    @Html.ActionLink("Delete", "Delete", new { id = item.CharacterId }) |
-    @Html.ActionLink("Journal", "Index", "Journal", new { id = item.CharacterId }, null) |
-    @Html.ActionLink("Inventory", "Index", "Inventory", new { id = item.CharacterId }, null)*@

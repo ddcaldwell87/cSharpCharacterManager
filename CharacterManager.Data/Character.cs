@@ -90,6 +90,9 @@ namespace CharacterManager.Data
         public Guid OwnerId { get; set; }
 
         [Required]
+        public int Level { get; set; }
+
+        [Required]
         public string CharacterName { get; set; }
 
         [Required]
@@ -107,16 +110,58 @@ namespace CharacterManager.Data
         [Required]
         public int HitPoints { get; set; }
 
+        public int ArmorClass { get; set; }
+        public int Initiative { get; set; }
+        public int Speed { get; set; }
+        public string HitDie { get; set; }
+
         public string PersonalityTraits { get; set; }
         public string Ideals { get; set; }
         public string Bonds { get; set; }
         public string Flaws { get; set; }
 
+        [Required]
         public int Strength { get; set; }
+
+        [Required]
         public int Dexterity { get; set; }
+
+        [Required]
         public int Constitution { get; set; }
+
+        [Required]
         public int Intelligence { get; set; }
+
+        [Required]
         public int Wisdom { get; set; }
+        
+        [Required]
         public int Charisma { get; set; }
+
+        public int SavingStr { get; set; }
+        public int SavingDex { get; set; }
+        public int SavingCon { get; set; }
+        public int SavingInt { get; set; }
+        public int SavingWis { get; set; }
+        public int SavingCha { get; set; }
+
+        public int Acrobatics { get; set; }
+        public int AnimalHandling { get; set; }
+        public int Arcana { get; set; }
+        public int Athletics { get; set; }
+        public int Deception { get; set; }
+        public int History { get; set; }
+        public int Insight { get; set; }
+        public int Intimidation { get; set; }
+        public int Investigation { get; set; }
+        public int Medicine { get; set; }
+        public int Nature { get; set; }
+        public int Perception { get; set; }
+        public int Performance { get; set; }
+        public int Persuasion { get; set; }
+        public int Religion { get; set; }
+        public int SleightOfHand { get; set; }
+        public int Stealth { get; set; }
+        public int Survival { get; set; }
     }
 }

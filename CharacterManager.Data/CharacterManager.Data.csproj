@@ -77,6 +77,26 @@
     <Compile Include="Migrations\201808291355046_addedAttributes.Designer.cs">
       <DependentUpon>201808291355046_addedAttributes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808301712504_addedSkills.cs" />
+    <Compile Include="Migrations\201808301712504_addedSkills.Designer.cs">
+      <DependentUpon>201808301712504_addedSkills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808301726544_addedAnimalHandling.cs" />
+    <Compile Include="Migrations\201808301726544_addedAnimalHandling.Designer.cs">
+      <DependentUpon>201808301726544_addedAnimalHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808301746384_addedSavingThrows.cs" />
+    <Compile Include="Migrations\201808301746384_addedSavingThrows.Designer.cs">
+      <DependentUpon>201808301746384_addedSavingThrows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808301821041_addedLevelProperty.cs" />
+    <Compile Include="Migrations\201808301821041_addedLevelProperty.Designer.cs">
+      <DependentUpon>201808301821041_addedLevelProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808312016183_fixedTypo.cs" />
+    <Compile Include="Migrations\201808312016183_fixedTypo.Designer.cs">
+      <DependentUpon>201808312016183_fixedTypo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,6 +119,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808291355046_addedAttributes.resx">
       <DependentUpon>201808291355046_addedAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808301712504_addedSkills.resx">
+      <DependentUpon>201808301712504_addedSkills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808301726544_addedAnimalHandling.resx">
+      <DependentUpon>201808301726544_addedAnimalHandling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808301746384_addedSavingThrows.resx">
+      <DependentUpon>201808301746384_addedSavingThrows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808301821041_addedLevelProperty.resx">
+      <DependentUpon>201808301821041_addedLevelProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808312016183_fixedTypo.resx">
+      <DependentUpon>201808312016183_fixedTypo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

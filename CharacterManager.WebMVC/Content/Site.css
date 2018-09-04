@@ -59,6 +59,14 @@ textarea {
     font-size: 1.1em;
 }
 
+#features {
+    padding-bottom: 7%;
+}
+
+.feature {
+    margin-bottom: 10%;
+}
+
 .char-info {
     font-size: 0.9em;
 }
@@ -111,9 +119,22 @@ textarea {
 
 .character-card {
     max-height: 450px;
-    padding: 0 3% 3% 3%;
+    padding: 0 3% 5% 3%;
 }
 
 .character-card a {
     color: #B26E63;
+}
+
+legend {
+    padding-left: 15px;
+    padding-top: 3%;
+}
+
+.loginForm {
+    margin: 5% auto;
+}
+
+.about {
+    margin: 5% auto;
 }

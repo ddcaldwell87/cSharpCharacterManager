@@ -59,9 +59,12 @@ namespace CharacterManager.WebMVC.Controllers
             var service = CreateCharacterService();
             var detail = service.GetCharacterById(id);
 
+            ViewBag.CharacterName = detail.CharacterName;
+
             var model = new CharacterEdit
             {
                 CharacterId = detail.CharacterId,
+                Level = detail.Level,
                 CharacterName = detail.CharacterName,
                 CharacterRace = detail.CharacterRace,
                 CharacterGender = detail.CharacterGender,
@@ -77,7 +80,35 @@ namespace CharacterManager.WebMVC.Controllers
                 Constitution = detail.Constitution,
                 Intelligence = detail.Intelligence,
                 Wisdom = detail.Wisdom,
-                Charisma = detail.Charisma
+                Charisma = detail.Charisma,
+                Acrobatics = detail.Acrobatics,
+                AnimalHandling = detail.AnimalHandling,
+                Arcana = detail.Arcana,
+                Athletics = detail.Athletics,
+                Deception = detail.Deception,
+                History = detail.History,
+                Insight = detail.Insight,
+                Intimidation = detail.Intimidation,
+                Investigation = detail.Investigation,
+                Medicine = detail.Medicine,
+                Nature = detail.Nature,
+                Perception = detail.Perception,
+                Performance = detail.Performance,
+                Persuasion = detail.Persuasion,
+                Religion = detail.Religion,
+                SleightOfHand = detail.SleightOfHand,
+                Stealth = detail.Stealth,
+                Survival = detail.Survival,
+                HitDie = detail.HitDie,
+                ArmorClass = detail.ArmorClass,
+                Speed = detail.Speed,
+                Initiative = detail.Initiative,
+                SavingStr = detail.SavingStr,
+                SavingDex = detail.SavingDex,
+                SavingCon = detail.SavingCon,
+                SavingInt = detail.SavingInt,
+                SavingWis = detail.SavingWis,
+                SavingCha = detail.SavingCha
             };
 
             return View(model);
