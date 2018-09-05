@@ -57,45 +57,13 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Journal.cs" />
-    <Compile Include="Migrations\201808161444454_InitialCreate.cs" />
-    <Compile Include="Migrations\201808161444454_InitialCreate.Designer.cs">
-      <DependentUpon>201808161444454_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201809041451048_initial.cs" />
+    <Compile Include="Migrations\201809041451048_initial.Designer.cs">
+      <DependentUpon>201809041451048_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808201500018_addedInventoryOwnerId.cs" />
-    <Compile Include="Migrations\201808201500018_addedInventoryOwnerId.Designer.cs">
-      <DependentUpon>201808201500018_addedInventoryOwnerId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808232018248_addedPropertiesToCharacter.cs" />
-    <Compile Include="Migrations\201808232018248_addedPropertiesToCharacter.Designer.cs">
-      <DependentUpon>201808232018248_addedPropertiesToCharacter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808281443331_addedDisplayAnnotations.cs" />
-    <Compile Include="Migrations\201808281443331_addedDisplayAnnotations.Designer.cs">
-      <DependentUpon>201808281443331_addedDisplayAnnotations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808291355046_addedAttributes.cs" />
-    <Compile Include="Migrations\201808291355046_addedAttributes.Designer.cs">
-      <DependentUpon>201808291355046_addedAttributes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808301712504_addedSkills.cs" />
-    <Compile Include="Migrations\201808301712504_addedSkills.Designer.cs">
-      <DependentUpon>201808301712504_addedSkills.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808301726544_addedAnimalHandling.cs" />
-    <Compile Include="Migrations\201808301726544_addedAnimalHandling.Designer.cs">
-      <DependentUpon>201808301726544_addedAnimalHandling.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808301746384_addedSavingThrows.cs" />
-    <Compile Include="Migrations\201808301746384_addedSavingThrows.Designer.cs">
-      <DependentUpon>201808301746384_addedSavingThrows.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808301821041_addedLevelProperty.cs" />
-    <Compile Include="Migrations\201808301821041_addedLevelProperty.Designer.cs">
-      <DependentUpon>201808301821041_addedLevelProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808312016183_fixedTypo.cs" />
-    <Compile Include="Migrations\201808312016183_fixedTypo.Designer.cs">
-      <DependentUpon>201808312016183_fixedTypo.cs</DependentUpon>
+    <Compile Include="Migrations\201809041937518_madeIntsNullable.cs" />
+    <Compile Include="Migrations\201809041937518_madeIntsNullable.Designer.cs">
+      <DependentUpon>201809041937518_madeIntsNullable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,35 +73,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808161444454_InitialCreate.resx">
-      <DependentUpon>201808161444454_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809041451048_initial.resx">
+      <DependentUpon>201809041451048_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808201500018_addedInventoryOwnerId.resx">
-      <DependentUpon>201808201500018_addedInventoryOwnerId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808232018248_addedPropertiesToCharacter.resx">
-      <DependentUpon>201808232018248_addedPropertiesToCharacter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808281443331_addedDisplayAnnotations.resx">
-      <DependentUpon>201808281443331_addedDisplayAnnotations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808291355046_addedAttributes.resx">
-      <DependentUpon>201808291355046_addedAttributes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808301712504_addedSkills.resx">
-      <DependentUpon>201808301712504_addedSkills.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808301726544_addedAnimalHandling.resx">
-      <DependentUpon>201808301726544_addedAnimalHandling.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808301746384_addedSavingThrows.resx">
-      <DependentUpon>201808301746384_addedSavingThrows.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808301821041_addedLevelProperty.resx">
-      <DependentUpon>201808301821041_addedLevelProperty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808312016183_fixedTypo.resx">
-      <DependentUpon>201808312016183_fixedTypo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809041937518_madeIntsNullable.resx">
+      <DependentUpon>201809041937518_madeIntsNullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
